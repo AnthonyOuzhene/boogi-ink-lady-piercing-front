@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-gap: 40px;
+    list-style: none;
+    align-items: center;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;  
+    color: black;   
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
