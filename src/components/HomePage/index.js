@@ -17,7 +17,7 @@ const HomePage = () => (
 
     <div className='logos'>
         <div className='boogi-ink-logo'>
-        <h1 className='boogi-ink-logo-fonts'>BoOgi'InK Tattoo</h1>
+        <h1 className='boogi-ink-logo-fonts'>BoOgi 'InK Tattoo</h1>
         <img src={boogiinklogo} alt="tattoo"/>
         </div>
 

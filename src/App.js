@@ -11,7 +11,7 @@ function App() {
   <div className='App'>
   <Router>
     <Navbar />
-     <HomePage />
+     <HomePage path="/"/>
      <Footer />
   </Router>
   </div>
