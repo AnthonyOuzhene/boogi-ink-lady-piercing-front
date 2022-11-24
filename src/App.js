@@ -2,15 +2,15 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import Navbar from './components/NavBar/Navbar';
-import HomePage from './components/HomePage';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import HomePage from './components/HomePage/HomePage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
   <div className='App'>
   <Router>
-    <Navbar />
+    <Header />
      <HomePage path="/"/>
      <Footer />
   </Router>

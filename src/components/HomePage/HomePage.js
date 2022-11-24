@@ -1,128 +1,44 @@
-import React from 'react';
+// Import CSS
+import './styles.scss';
+import '../../assets/fonts/Stayola.ttf';
 
-const HomePage = () => {
-  return (
+// Import du caroussel
+import ImageSlider from './ImageSlider';
+import { SliderData } from './SliderData';
+
+// import Images
+import boogiinklogo from './images/boogiinklogo.jpg';
+import ladypiercinglogo from './images/ladypiercinglogo.jpg';
+
+const HomePage = () => (
     <div>
-    <div class="nav_container">
-            <nav class="nav-navbar">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="x">Accueil</a></li>
-                    <li class="nav-item"><a href="x">Le salon</a></li>
-                    <ul class="nav-item-dropdown">
-                        <li class="nav-item"><a href="x">L'espace tattoo</a></li>
-                        <li class="nav-item"><a href="x">L'atelier piercing</a></li>
-                    </ul>
-                    <li class="nav-item"><a href="x">La boutique</a></li>
-                    <li class="nav-item"><a href="x">Actualités</a></li>
-                    <li class="nav-item"><a href="x">Contact</a></li>
 
-                    <li class="nav-item"><a href="x">Mon compte</a></li>
-                </ul>
-                <a href="x">
-                    <img src="" class="cart-icon" alt="Mon panier" />
-                </a>
-            </nav>
 
-            <div class="nav-banner">
-                <img src="x" alt="x" />
+        <div className='presentation-salon'>
+            <h1 className='welcome'>Bienvenue chez Boog'ink et Lady Piercing</h1>
+
+            <p>Lorem ipsum dolor sit amet. Eum ratione soluta non reprehenderit consequatur vel veniam quia non obcaecati vitae qui labore aspernatur. Nam totam cupiditate et voluptates temporibus sit mollitia alias non optio soluta eos eligendi autem. Non voluptatem quia est cumque amet et exercitationem quia ut excepturi exercitationem et deleniti fugit. A animi nulla non ipsa porro et culpa consectetur.</p>
+        </div>
+
+        <div className='logos'>
+            <div className='boogi-ink-logo'>
+                <h2 className='boogi-ink-logo-fonts'>BoOgi 'InK Tattoo</h2>
+                <img src={boogiinklogo} alt="tattoo" />
+            </div>
+
+            <div className='lady-piercing-logo'>
+                <h2 className='lady-piercing-logo-fonts'>Lady Piercing</h2>
+                <img src={ladypiercinglogo} alt="piercing" />
             </div>
         </div>
 
-        <h1>
-            Welcome to Boogi'ink & Lady Piercing
-        </h1>
+        <h2>Découvrez nos réalisations</h2>
+        {/* <GoogleMap /> */}
 
-        <div class="brand_container">
-            <div class="brand-details">
-                <h2 class="brand-name">Boogi'ink</h2>
-                <img class="brand-logo" src="" alt="logo du tatouage" />
-            </div>
+        <ImageSlider slides={SliderData} />
 
-            <div class="brand-details">
-                <h2 class="brand-name">Lady Piercing</h2>
-                <img class="brand-logo" src="" alt="logo du piercing" />
-            </div>
-        </div>
+    </div>
 
-        <div class="home_container">
-            <div class="home-presentation">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat quos quasi quis ipsa
-                    neque, illo, laudantium error consequuntur delectus perferendis eveniet iusto? Molestiae enim
-                    obcaecati aperiam sequi asperiores laudantium! Commodi nemo saepe cum voluptate porro hic, nulla
-                    iste quos velit laudantium consequatur, iusto eos impedit totam inventore voluptates voluptatibus.
-                </p>
-            </div>
-            <div class="contact-details">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, culpa neque. Cumque
-                    perspiciatis quae obcaecati eveniet nobis in amet ipsa, iure eos, vero minima quaerat exercitationem
-                    molestiae rerum molestias culpa reprehenderit aspernatur. Harum odit dolorum laborum amet culpa,
-                    dicta necessitatibus soluta qui aperiam optio! Incidunt iusto expedita a alias voluptas!
-                </p>
-            </div>
-        </div>
+);
 
-        <div class="carousel_container">
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="x" alt="salon1"/>
-                </div>
-                <div class="carousel-item">
-                    <img src="x" alt="salon2" />
-                </div>
-                <div class="carousel-item">
-                    <img src="" alt="salon3" />
-                </div>
-                <div class="carousel-item">
-                    <img src="x" alt="salon4" />
-                </div>
-                <div class="carousel-item">
-                    <img src="x" alt="salon5" />
-                </div>
-            </div>
-        </div>
-
-        <div class="footer_container">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="x">Accueil</a></li>
-                    <li><a href="x">Tatouage</a></li>
-                    <li><a href="x">Piercing</a></li>
-                    <li><a href="x">La boutique</a></li>
-                    <li><a href="x">Le livre d'or</a></li>
-                    <li><a href="x">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="landing-page">
-                <ul>
-                    <li><a href="x">Mentions légales</a></li>
-                    <li><a href="x">Règles sanitaires</a></li>
-                    <li><a href="x">Plan du site</a></li>
-                </ul>
-            </div>
-
-            <div class="social-media">
-                <ul>
-                    <li><a href="x">Facebook</a></li>
-                    <li><a href="x">Instagram</a></li>
-                    <li><a href="x">Tik Tok</a></li>
-                    <li><a href="x">You Tube</a></li>
-                </ul>
-            </div>
-
-            <div class="contact-details">
-                <ul>
-                    <li>Boog'ink & Lady Piercing</li>
-                    <li>Adresse</li>
-                    <li>06 00 00 00 00</li>
-                </ul>
-            </div>
-
-        </div>
-        </div>
-  )
-}
-
-export default HomePage
+export default HomePage;
