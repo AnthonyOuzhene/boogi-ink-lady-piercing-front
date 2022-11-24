@@ -1,50 +1,49 @@
-import React from 'react';
-import './styles.scss';
+import React, { useState } from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
+
+import './styles.scss'
 
 const Navbar = () => {
-  return (
-        <nav className='navbar'>
 
-                <ul className='nav-menu'>
-                    <li>
-                        <a href="/">
-                            <p>Accueil</p>
-                        </a>
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click)
+
+    const closeMenu = () => setClick(false)
+
+    return (
+        <div className='header'>
+            <nav className='navbar'>
+                <div className='hamburger' onClick={handleClick}>
+                    {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
+                        : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
+
+                </div>
+                <ul className={click ? "nav-menu active" : "nav-menu"}>
+                    <li className='nav-item'>
+                        <a href='/' onClick={closeMenu}>Home</a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <p>Le salon</p>
-                        </a>
+                    <li className='nav-item'>
+                        <a href='x' onClick={closeMenu}>Le salon</a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <p>L'espace Tattoo</p>
-                        </a>
+                    <li className='nav-item'>
+                        <a href='x' onClick={closeMenu}>La boutique</a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <p>L'espace Piercing</p>
-                        </a>
+                    <li className='nav-item'>
+                        <a href='x' onClick={closeMenu}>Actualités</a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <p>La boutique</p>
-                        </a>
+                    <li className='nav-item'>
+                        <a href='#x' onClick={closeMenu}>Livre d'or</a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <p>Contact</p>
-                        </a>
+                    <li className='nav-item'>
+                        <a href='#x' onClick={closeMenu}>Contact</a>
                     </li>
-                    <li>
-                        <a href="/">
-                            <p>Mon compte</p>
-                        </a>
+                    <li className='nav-item'>
+                        <a href='#dx' onClick={closeMenu}>Mon compte</a>
                     </li>
                 </ul>
-       
-        </nav>
-  )
+            </nav>
+        </div>
+    )
 }
 
 export default Navbar
