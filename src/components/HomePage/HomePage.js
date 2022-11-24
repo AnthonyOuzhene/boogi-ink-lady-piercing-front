@@ -33,6 +33,7 @@ const HomePage = () => (
         </div>
 
         <h2>Découvrez nos réalisations</h2>
+        <h3>coucou</h3>
         {/* <GoogleMap /> */}
 
         <ImageSlider slides={SliderData} />
