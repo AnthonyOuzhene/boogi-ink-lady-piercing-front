@@ -11,6 +11,7 @@ const Navbar = () => {
     const closeMenu = () => setClick(false)
 
     return (
+        <div>
         <div className='header'>
             <nav className='navbar'>
                 <div className='hamburger' onClick={handleClick}>
@@ -22,9 +23,20 @@ const Navbar = () => {
                     <li className='nav-item'>
                         <a href='/' onClick={closeMenu}>Home</a>
                     </li>
+
+                    <div className='link-salons'>
                     <li className='nav-item'>
                         <a href='x' onClick={closeMenu}>Le salon</a>
                     </li>
+                        <div className="dropdown-content">         
+                         <ul>
+                           <li><a href='x'>L'atelier Tattoo</a></li>
+                            <li><a href='x'>L'atelier Piercing</a></li>
+                         </ul>
+                        </div> 
+                    </div>
+              
+
                     <li className='nav-item'>
                         <a href='x' onClick={closeMenu}>La boutique</a>
                     </li>
@@ -32,16 +44,18 @@ const Navbar = () => {
                         <a href='x' onClick={closeMenu}>Actualités</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#x' onClick={closeMenu}>Livre d'or</a>
+                        <a href='x' onClick={closeMenu}>Livre d'or</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#x' onClick={closeMenu}>Contact</a>
+                        <a href='x' onClick={closeMenu}>Contact</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#dx' onClick={closeMenu}>Mon compte</a>
+                        <a href='x' onClick={closeMenu}>Mon compte</a>
                     </li>
                 </ul>
             </nav>
+
+        </div>
         </div>
     )
 }
