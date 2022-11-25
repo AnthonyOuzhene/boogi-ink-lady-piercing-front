@@ -1,20 +1,21 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
-
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
+import TattooWorkShop from './components/TattooWorkShop/TattooWorkShop';
 
-function App() {
+const App = () => {
   return (
-  <div className='App'>
-  <Router>
-    <Header />
-     <HomePage path="/"/>
-     <Footer />
-  </Router>
-  </div>
+    <div className='App'>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/atelier-tatouage" element={<TattooWorkShop />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
