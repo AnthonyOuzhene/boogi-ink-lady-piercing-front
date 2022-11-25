@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     position: fixed;
-    height: 90px;
+    height: 100vh;
     width: 100%;
     top: 0;
     left: 0;
@@ -17,7 +17,8 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1240px;
-    height: 100%;
+    height: 10%;
+
 }
 
 .header .nav-menu a {
@@ -37,6 +38,7 @@
 
 .header .nav-item a:hover {
     padding-bottom: 12px;
+    color: black;
 }
 
 .hamburger {
@@ -50,6 +52,46 @@ li {
 a {
     text-decoration: none;
 }
+
+// Sous-menu
+.link-salons {
+    position: relative;
+   
+    .dropdown-content {
+      display: none;
+      background-color: black;
+      position: absolute;
+      width: 250px;
+      padding: 20px;
+    }
+
+    &:hover {
+      
+      .dropdown-content {
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+
+        li {
+          color: white;
+          letter-spacing: -1px;
+          font-size: 1em;
+          text-align: left;
+
+          &:hover {
+            cursor: pointer;
+            color: white;
+
+            .link-component {
+              color: white;
+            }
+          }
+        }
+      }
+  }
+  }
+    
+
 
 @media screen and (max-width:940px) {
     .header {
@@ -86,14 +128,12 @@ a {
     .nav-item {
         margin: 0.5rem 1rem;
     }
+
+    .nav-item:hover{
+        cursor: pointer;
+        color: black;
+    }
 }
-
-
-
-
-
-
-
 
 
 
