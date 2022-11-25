@@ -7,8 +7,8 @@ import Slider from './Slider';
 import { SliderData } from './SliderData';
 
 // import Images
-import boogiinklogo from './images/boogiinklogo.jpg';
-import ladypiercinglogo from './images/ladypiercinglogo.jpg';
+import boogiinklogo from './images/boogiinklogo.png';
+import ladypiercinglogo from './images/ladypiercinglogo.png';
 
 const HomePage = () => (
     <div>
