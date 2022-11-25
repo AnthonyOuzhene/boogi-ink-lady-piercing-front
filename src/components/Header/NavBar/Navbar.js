@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { AiOutlineUser } from 'react-icons/ai'
 
 import './styles.scss'
 
@@ -38,19 +39,19 @@ const Navbar = () => {
               
 
                     <li className='nav-item'>
-                        <a href='x' onClick={closeMenu}>La boutique</a>
+                        <a href='/la-boutique' onClick={closeMenu}>La boutique</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='x' onClick={closeMenu}>Actualités</a>
+                        <a href='/actualites' onClick={closeMenu}>Actualités</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='x' onClick={closeMenu}>Livre d'or</a>
+                        <a href='/livre-dor' onClick={closeMenu}>Livre d'or</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='x' onClick={closeMenu}>Contact</a>
+                        <a href='/contact' onClick={closeMenu}>Contact</a>
                     </li>
-                    <li className='nav-item'>
-                        <a href='x' onClick={closeMenu}>Mon compte</a>
+                    <li className='nav-item login-icon'>
+                        <a href='/mon-compte' onClick={closeMenu}><AiOutlineUser /></a>
                     </li>
                 </ul>
             </nav>

@@ -53,6 +53,10 @@ a {
     text-decoration: none;
 }
 
+.login-icon {
+    font-size: 1.5rem;
+}
+
 // Sous-menu
 .link-salons {
     position: relative;
@@ -61,6 +65,7 @@ a {
       display: none;
       background-color: black;
       position: absolute;
+      right: -4rem;
       width: 250px;
       padding: 20px;
     }
@@ -69,7 +74,7 @@ a {
       
       .dropdown-content {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         z-index: 5;
 
         li {
@@ -77,10 +82,10 @@ a {
           letter-spacing: -1px;
           font-size: 1em;
           text-align: left;
+          margin-bottom: 0.8rem;
 
           &:hover {
             cursor: pointer;
-            color: white;
 
             .link-component {
               color: white;
@@ -90,8 +95,6 @@ a {
       }
   }
   }
-    
-
 
 @media screen and (max-width:940px) {
     .header {
