@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3em auto;
+    padding: 0 20px;
+}
+// Formulaire de contact
+input[type="text"], input[type="email"] {
+    width: 60%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+textarea {
+    width: 60%;
+    height: 150px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+label {
+    margin-left: 0px;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0.3em;
+}
+
+input[type="submit"] {
+    background-color: #8f9091;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2em;
+    width: 60%;
+    cursor: pointer;
+}
+// input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+//     border: 2px solid rgb(7, 7, 7);
+// }
+input[type="submit"]:hover {
+    background-color: #1872d9;
+}
+
+// Encart de Google Maps
+iframe {
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+
+.contact h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1em;
+}
+
+h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+// CSS des réseau sociaux
+.social-icons {
+    color: #ffffff;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+}
+.social-icons>a {
+    padding: 20px;
+}
