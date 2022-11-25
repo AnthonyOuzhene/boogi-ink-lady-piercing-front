@@ -97,6 +97,7 @@ a {
     .header {
         max-width: 100%;
         background-color: rgba(0,0,0,.9);
+        height: 10vh;
     }
 
     .header .navbar {
@@ -111,7 +112,7 @@ a {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 90px;
+        top: 85px;
         flex-direction: column;
         background-color: rgba(0,0,0,.9);
         width: 100%;

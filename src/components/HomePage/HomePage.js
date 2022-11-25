@@ -3,7 +3,7 @@ import './styles.scss';
 import '../../assets/fonts/Stayola.ttf';
 
 // Import du caroussel
-import ImageSlider from './ImageSlider';
+import Slider from './Slider';
 import { SliderData } from './SliderData';
 
 // import Images
@@ -36,7 +36,7 @@ const HomePage = () => (
         <h2>Découvrez nos réalisations</h2>
         {/* <GoogleMap /> */}
 
-        <ImageSlider slides={SliderData} />
+        <Slider slides={SliderData} />
     </div>
 
 
