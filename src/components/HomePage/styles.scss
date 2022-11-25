@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
    }
    
    .image {
@@ -18,7 +19,7 @@
      top: 50%;
      right: 32px;
      font-size: 3rem;
-     color: black;
+     color: white;
      z-index: 10;
      cursor: pointer;
      user-select: none;
@@ -29,7 +30,7 @@
      top: 50%;
      left: 32px;
      font-size: 3rem;
-     color: black;
+     color: white;
      z-index: 10;
      cursor: pointer;
      user-select: none;
