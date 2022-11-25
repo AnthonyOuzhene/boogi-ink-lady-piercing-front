@@ -13,7 +13,7 @@ import ladypiercinglogo from './images/ladypiercinglogo.jpg';
 const HomePage = () => (
     <div>
 
-
+        <div>
         <div className='presentation-salon'>
             <h1 className='welcome'>Bienvenue chez Boog'ink et Lady Piercing</h1>
 
@@ -31,13 +31,14 @@ const HomePage = () => (
                 <img src={ladypiercinglogo} alt="piercing" />
             </div>
         </div>
+        </div>
 
         <h2>Découvrez nos réalisations</h2>
         {/* <GoogleMap /> */}
 
         <ImageSlider slides={SliderData} />
-
     </div>
+
 
 );
 
