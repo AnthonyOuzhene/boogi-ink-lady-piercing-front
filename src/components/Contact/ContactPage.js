@@ -15,16 +15,16 @@ const Contact = () => {
                     27210 Beuzeville </p>
             </div>
             < GoogleMap />
+            <ContactForm />
             <div className='social'>
                 <h2> Suivez-nous ! </h2>
                 <div className="social-icons">
-                <a href='rt'>< FaTiktok /></a>
-                <a href='https://www.instagram.com/julienbourgarit/'>< BsInstagram /></a>
-                <a href='https://www.facebook.com/julienbourgarit/'>< FaFacebook /></a>
-                <a href='rt'>< AiFillMail /></a>
+                <a href='rt' target={'blank'}>< FaTiktok /></a>
+                <a href='https://www.instagram.com/julienbourgarit/' target={'blank'}>< BsInstagram /></a>
+                <a href='https://www.facebook.com/julienbourgarit/' target={'blank'}>< FaFacebook /></a>
+                <a href='rt' target={'blank'}>< AiFillMail /></a>
                 </div>
             </div>
-            <ContactForm />
         </div>
     )
 }
