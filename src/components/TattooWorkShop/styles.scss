@@ -1,6 +1,6 @@
 .tattoo-welcome {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 3em;
+    margin-bottom: 4em;
 }
 
 .name {
@@ -48,7 +48,7 @@
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    margin-top: 4rem;
+    margin-top: 6rem;
     font-style: italic;
 }
 
@@ -162,7 +162,9 @@
 .FAQ {
 
     border-top: 1px solid rgb(27, 189, 219);
-    margin-top: 6rem;
+
+    max-width: 964px;
+    margin: 6rem auto;
 
 
     .FAQ-title {
@@ -194,6 +196,7 @@
     .question {
         text-transform: uppercase;
         background-color: rgba(66,66,66,1);
+        border: 1px solid white;
         text-align: center;
         padding: 1rem;
     }

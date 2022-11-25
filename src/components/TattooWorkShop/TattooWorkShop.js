@@ -21,7 +21,6 @@ const TattooWorkShop = () => {
 
             <div className='presentation-tattoer'>
                 <div className='tattooer'>
-                    <h2 className='tattoer-name'>BoOgi 'InK</h2>
 
                     <img className="tattoer-picture" src={boogiinklogo} alt="tatoueur" />
                 </div>
