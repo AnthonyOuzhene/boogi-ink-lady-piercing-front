@@ -1,58 +1,98 @@
 
 // CSS du caroussel
-.slider {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-   
-   .image {
-     width: 1000px;
-     height: 600px;
-   }
-   
-   .right-arrow {
-     position: absolute;
-     top: 50%;
-     right: 32px;
-     font-size: 3rem;
-     color: black;
-     z-index: 10;
-     cursor: pointer;
-     user-select: none;
-   }
-   
-   .left-arrow {
-     position: absolute;
-     top: 50%;
-     left: 32px;
-     font-size: 3rem;
-     color: black;
-     z-index: 10;
-     cursor: pointer;
-     user-select: none;
-   }
-   
-   .slide {
-     opacity: 0;
-     transition-duration: 1s ease;
-   }
-   
-   .slide.active {
-     opacity: 1;
-     transition-duration: 1s;
-     transform: scale(1.08);
-   }
 
-@media screen and (max-width:500px) {
-    .img {
-        height: 100vh;
-        width: 100vh;
-        object-fit: cover;
-    }
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+  }
+
+  h2 {
+    margin: 2rem;
+  }
+
+  
+@media screen and (max-width: 864px) {
+
+
+.slider {
+    width: 100%;
+    height: 30vh;
 }
+}
+  
+  @media screen and (min-width: 600px) {
+
+
+.slide img {
+      width: 100%;
+      height: 100%;
+}
+  }
+  .current {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .content {
+    position: absolute;
+    top: 23rem;
+    left: 5rem;
+    opacity: 0;
+    width: 50%;
+    color: #fff;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    animation: slide-up 1s ease 0.5s;
+    // animation-delay: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      visibility: visible;
+      top: 23rem;
+    }
+    100% {
+      visibility: visible;
+      top: 17rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .slide img {
+        width: 100%;
+        height: 100%;
+  }
+
+    .content {
+      width: 50%;
+    }
+  }
+  
+  .content > * {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .current .content {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease;
+  }
 
 
 
@@ -61,7 +101,7 @@
     display: flex;
     justify-content: space-around;
 
-    @media screen and (max-width: 864px) {
+@media screen and (max-width: 864px) {
         flex-direction: column;  
     }
 }
@@ -116,18 +156,18 @@
 
     h2 {
         text-align: center;
-        margin-bottom: 20px;
         color: white;
     }
     
     p {
-        text-align: justify;
+        text-align: center;
     }
 
     h1 {
         font-family: 'Raleway';
         font-weight: bold;
         color: white;
+        margin-bottom: 2rem;
     }
 }
 
