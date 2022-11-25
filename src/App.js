@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
 import TattooWorkShop from './components/TattooWorkShop/TattooWorkShop';
-import Contact from './components/Contact/Contact';
+import Contact from './components/Contact/ContactPage';
 
 const App = () => {
   return (
