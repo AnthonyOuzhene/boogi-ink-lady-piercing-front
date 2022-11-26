@@ -10,16 +10,21 @@ import HomePage from './components/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
 import TattooWorkShop from './components/TattooWorkShop/TattooWorkShop';
 import PiercingWorkSpace from './components/PiercingWorkSpace/PiercingWorkSpace';
+import Login from './components/Login/Login';
+import SignUp from './components/Login/SignUp';
 
 const App = () => {
   return (
     <div className='App'>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route exact path="/" element={<HomePage />} />
         <Route path="/atelier-tatouage" element={<TattooWorkShop />} />
         <Route path="/espace-piercing" element={<PiercingWorkSpace />} />
         <Route path="/contact" element={<Contact />} />
+        <Route exact path="/" element={<Login />} />
+        <Route path="/mon-compte" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
       <Footer />
     </div>

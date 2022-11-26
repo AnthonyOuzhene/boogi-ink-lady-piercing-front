@@ -1,6 +1,6 @@
 .tattoo-welcome {
     margin-top: 3em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     text-shadow: 2px 1px 1px rgb(27, 189, 219);
 }
 
@@ -20,10 +20,16 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
-    text-align: center;
+    text-align: justify;
     letter-spacing: 0.1rem;
     line-height: 1.5;
     margin-top: 4rem;
+
+    @media screen and (max-width: 624px) {
+        display: block;
+        text-align: center;
+        margin-top: 0;
+    }
 
 
     .tattoer-picture {
@@ -31,7 +37,6 @@
         border-radius: 30%;
         width: 20rem;
         height: 26rem;
-        margin-right: 2rem;
     }
 
     .tattoer-description {
@@ -41,6 +46,13 @@
         margin-bottom: 1rem;
         width: 50vw;
         padding-left: 8rem;
+
+        @media screen and (max-width: 624px) {
+            width: 100vw;
+            padding: 2rem;
+            font-size: 1rem;
+            text-align: justify;
+        }
     }
 }
 
@@ -69,7 +81,6 @@
     @media screen and (max-width: 624px) {
         grid-template-columns: repeat(1, 1fr);
     }
-
 
     img {
         width: 100%;

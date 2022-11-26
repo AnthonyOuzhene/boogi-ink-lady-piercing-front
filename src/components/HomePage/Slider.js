@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { SliderData } from "./SliderData";
 import "./styles.scss";
 

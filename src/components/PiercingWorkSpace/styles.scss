@@ -1,6 +1,6 @@
 .lady-piercing-welcome {
     margin-top: 3em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     text-shadow: 2px 1px 1px rgb(240, 0, 180);
 }
 
@@ -21,21 +21,25 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
-    text-align: center;
+    text-align: justify;
     letter-spacing: 0.1rem;
     line-height: 1.5;
+
+    @media screen and (max-width: 624px) {
+        display: block;
+        text-align: center;
+        margin-top: 0;
+    }
 
     .lady-piercing-picture {
         box-shadow: 0 0 10px 0 rgb(240, 0, 180);
         border-radius: 30%;
         width: 25rem;
         height: 25rem;
-        margin-right: 2rem;
 
         @media screen and (max-width: 940px) {
             width: 18rem;
             height: 18rem;
-            margin-left: 9rem;
         }
     }
 
@@ -47,8 +51,10 @@
         padding-left: 8rem;
 
         @media screen and (max-width: 940px) {
-            margin-top: 2rem;
-            width: 90vw;
+            width: 100vw;
+            padding: 2rem;
+            font-size: 1rem;
+            text-align: justify;
         }
     }
 
