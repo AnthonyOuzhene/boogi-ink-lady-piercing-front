@@ -31,7 +31,7 @@ const Navbar = () => {
                     </li>
                         <div className="dropdown-content">         
                          <ul>
-                           <li><a href='x'>L'atelier Tattoo</a></li>
+                           <li><a href='/atelier-tatouage'>L'atelier Tattoo</a></li>
                             <li><a href='x'>L'atelier Piercing</a></li>
                          </ul>
                         </div> 
