@@ -101,6 +101,10 @@
     display: flex;
     justify-content: space-around;
 
+    .boogiink-image {
+        width: 18vw;
+    }
+
 @media screen and (max-width: 864px) {
         flex-direction: column;  
     }

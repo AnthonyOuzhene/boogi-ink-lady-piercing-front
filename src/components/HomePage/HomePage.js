@@ -7,7 +7,7 @@ import Slider from './Slider';
 import { SliderData } from './SliderData';
 
 // import Images
-import boogiinklogo from './images/boogiinklogo.png';
+import boogiinklogo from './images/boogi_ink-logo.png';
 import ladypiercinglogo from './images/ladypiercinglogo.png';
 
 const HomePage = () => (
@@ -23,7 +23,7 @@ const HomePage = () => (
         <div className='logos'>
             <div className='boogi-ink-logo'>
                 <h2 className='boogi-ink-logo-fonts'>BoOgi 'InK Tattoo</h2>
-                <img src={boogiinklogo} alt="tattoo" />
+                <img src={boogiinklogo} className="boogiink-image" alt="tattoo" />
             </div>
 
             <div className='lady-piercing-logo'>
