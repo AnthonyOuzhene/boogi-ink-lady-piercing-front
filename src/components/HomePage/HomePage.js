@@ -8,7 +8,7 @@ import { SliderData } from './SliderData';
 
 // import Images
 import boogiinklogo from './images/boogi_ink-logo.png';
-import ladypiercinglogo from './images/ladypiercinglogo.png';
+import ladypiercinglogo from './images/lady-piercing-logo.png';
 
 const HomePage = () => (
     <div>
@@ -28,7 +28,7 @@ const HomePage = () => (
 
             <div className='lady-piercing-logo'>
                 <h2 className='lady-piercing-logo-fonts'>Lady Piercing</h2>
-                <img src={ladypiercinglogo} alt="piercing" />
+                <img className="lady-piercing-image" src={ladypiercinglogo} alt="piercing" />
             </div>
         </div>
         </div>

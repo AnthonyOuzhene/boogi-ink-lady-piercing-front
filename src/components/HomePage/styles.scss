@@ -102,7 +102,12 @@
     justify-content: space-around;
 
     .boogiink-image {
-        width: 18vw;
+        width: 20vw;
+        margin-top: 2rem;
+
+        @media screen and (max-width: 864px) {
+          width: 50vw; 
+      }
     }
 
 @media screen and (max-width: 864px) {
@@ -137,6 +142,14 @@
 .lady-piercing-logo {
     display: block;
     text-align: center;
+
+    .lady-piercing-image {
+        width: 28vw;
+
+        @media screen and (max-width: 864px) {
+          width: 60vw; 
+      }
+    }
 
     .lady-piercing-logo-fonts {
         font-family: 'Stayola';
