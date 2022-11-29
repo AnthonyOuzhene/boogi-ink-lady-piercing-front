@@ -4,6 +4,7 @@
     position: fixed;
     height: 20vh;
     width: 100%;
+    height: 20vh;
     top: 0;
     left: 0;
     z-index: 1;
@@ -61,46 +62,46 @@ a {
 // Sous-menu
 .link-salons {
     position: relative;
-   
+
     .dropdown-content {
-      display: none;
-      background-color: black;
-      position: absolute;
-      right: -4rem;
-      width: 250px;
-      padding: 20px;
+        display: none;
+        background-color: black;
+        position: absolute;
+        right: -4rem;
+        width: 250px;
+        padding: 20px;
     }
 
     &:hover {
-      
-      .dropdown-content {
-        display: flex;
-        justify-content: left;
-        z-index: 5;
 
-        li {
-          color: white;
-          letter-spacing: -1px;
-          font-size: 1em;
-          text-align: left;
-          margin-bottom: 0.8rem;
+        .dropdown-content {
+            display: flex;
+            justify-content: left;
+            z-index: 5;
 
-          &:hover {
-            cursor: pointer;
+            li {
+                color: white;
+                letter-spacing: -1px;
+                font-size: 1em;
+                text-align: left;
+                margin-bottom: 0.8rem;
 
-            .link-component {
-              color: white;
+                &:hover {
+                    cursor: pointer;
+
+                    .link-component {
+                        color: white;
+                    }
+                }
             }
-          }
         }
-      }
-  }
-  }
+    }
+}
 
 @media screen and (max-width:940px) {
     .header {
         max-width: 100%;
-        background-color: rgba(0,0,0,.9);
+        background-color: rgba(0, 0, 0, .9);
         height: 10vh;
     }
 
@@ -118,7 +119,7 @@ a {
         left: -100%;
         top: 85px;
         flex-direction: column;
-        background-color: rgba(0,0,0,.9);
+        background-color: rgba(0, 0, 0, .9);
         width: 100%;
         height: 90vh;
         z-index: 999;
@@ -134,16 +135,8 @@ a {
         margin: 0.5rem 1rem;
     }
 
-    .nav-item:hover{
+    .nav-item:hover {
         cursor: pointer;
         color: black;
     }
 }
-
-
-
-
-
-
-
-

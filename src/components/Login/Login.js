@@ -3,7 +3,7 @@ import './styles.scss'
 
 const Login = () => {
     return (
-        <div>
+        <div className='container-login'>
             <h1>Connexion</h1>
             <form className="formContainer" action="/action_page.php">
                 <label for="emailAddress">Email</label>
@@ -11,9 +11,17 @@ const Login = () => {
 
                 <label for="password">Mot de passe</label>
                 <input id="password" type="password" name="password" placeholder="Votre mot de passe" required></input><br></br>
+                <p className="forgotPassword">Mot de passe oublié ?</p>
 
-                <input type="submit" value="Envoyer"></input>
-            </form>            
+                <input className="send" type="submit" value="Envoyer"></input>
+
+                <div className="signUp">
+                    <p>Vous voulez nous rejoindre ?</p>
+                    <a href="/sign-up">Inscrivez-vous</a>
+                </div>
+
+            </form>
+
         </div>
     );
 }
