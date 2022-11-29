@@ -121,22 +121,36 @@
     align-items: center;
     justify-items: center;
     max-width: 100vh;
+    width: 90%;
 
     @media screen and (max-width: 940px) {
         grid-template-columns: repeat(2, 1fr);
+        width: 90%;
     }
 
     @media screen and (max-width: 624px) {
         grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+    }
+    .piercing-gallery-link {
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 0 0 15px 0 rgb(240, 0, 180);
     }
 }
 
-.piercing-gallery-link>img {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    box-shadow: 0 0 15px 0 rgb(240, 0, 180);
-}
+// .piercing-gallery-link>img {
+//     width: 100%;
+//     height: 50vh;
+//     object-fit: cover;
+//     box-shadow: 0 0 15px 0 rgb(240, 0, 180);
+// }
 
 
 .lady-piercing-gallery-button {
@@ -235,6 +249,7 @@
     border-top: 1px solid rgb(240, 0, 180);
     max-width: 964px;
     margin: 6rem auto;
+    width: 90%;
 
 
     .FAQ-title {

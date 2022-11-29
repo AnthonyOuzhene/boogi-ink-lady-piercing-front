@@ -30,7 +30,7 @@ const TattooWorkShop = () => {
 
             <h2 className="gallery-title">Galerie photos des tatouages</h2>
 
-            <div className='tattoo-gallery'>
+            <div className='tattoo-gallery parent'>
 
                 <a href="x" className="tattoo-gallery-link">
                     <img src={tattoo1} alt="tattoo" />

@@ -5,7 +5,7 @@
 }
 
 .tattoer-name {
-    font-family: 'Vegan Style Personal Use';
+    font-family: "Vegan Style Personal Use";
     text-shadow: 2px 1px 1px black;
     color: rgb(27, 189, 219);
     font-weight: 500;
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     text-align: justify;
@@ -30,7 +30,6 @@
         text-align: center;
         margin-top: 0;
     }
-
 
     .tattoer-picture {
         box-shadow: 0 0 10px 0 rgb(27, 189, 219);
@@ -64,7 +63,6 @@
     font-style: italic;
 }
 
-
 .tattoo-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,18 +71,26 @@
     align-items: center;
     justify-items: center;
     max-width: 100vh;
+    width: 90%;
 
     @media screen and (max-width: 940px) {
+        width: 90%;
         grid-template-columns: repeat(2, 1fr);
     }
 
     @media screen and (max-width: 624px) {
+        width: 90%;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tattoo-gallery-link {
+        width: 100%;
+        height: 100%;
     }
 
     img {
         width: 100%;
-        height: 50vh;
+        height: 100%;
         object-fit: cover;
         box-shadow: 0 0 15px 0 rgb(27, 189, 219);
     }
@@ -96,7 +102,6 @@
     align-items: center;
     margin: 2rem auto;
     max-width: 1064px;
-
 
     .tattoo-gallery-button-left {
         display: flex;
@@ -133,7 +138,6 @@
     align-items: center;
     cursor: pointer;
 
-
     .tattoo-gallery-button-number-1 {
         display: flex;
         justify-content: center;
@@ -162,7 +166,6 @@
         font-weight: 500;
         cursor: pointer;
         padding: 1.5rem;
-
     }
 
     .tattoo-gallery-button-number-3 {
@@ -182,11 +185,10 @@
 }
 
 .tattoo-FAQ {
-
     border-top: 1px solid rgb(27, 189, 219);
     max-width: 964px;
     margin: 6rem auto;
-
+    width: 90%;
 
     .FAQ-title {
         font-size: 2rem;
@@ -216,7 +218,7 @@
 
     .question {
         text-transform: uppercase;
-        background-color: rgba(66,66,66,1);
+        background-color: rgba(66, 66, 66, 1);
         border: 1px solid white;
         text-align: center;
         padding: 1rem;
@@ -226,5 +228,17 @@
         font-size: 1rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
-    }
+    }   
+}
+
+@media screen and (max-width: 940px) {
+    .question {
+        font-size: 0.8em;
+}
+}
+
+@media screen and (max-width: 624px) {
+    .question {
+        font-size: 0.7em;
+}
 }
