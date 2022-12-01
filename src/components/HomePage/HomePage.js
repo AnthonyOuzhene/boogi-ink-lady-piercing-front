@@ -14,27 +14,44 @@ const HomePage = () => (
     <div>
 
         <div>
-        <div className='presentation-salon'>
-            <h1 className='welcome'>Bienvenue chez Boog'ink et Lady Piercing</h1>
+            <div className='presentation-salon'>
+                <h1 className='welcome'>Bienvenue chez Boog'ink et Lady Piercing !</h1>
 
-            <p>Lorem ipsum dolor sit amet. Eum ratione soluta non reprehenderit consequatur vel veniam quia non obcaecati vitae qui labore aspernatur. Nam totam cupiditate et voluptates temporibus sit mollitia alias non optio soluta eos eligendi autem. Non voluptatem quia est cumque amet et exercitationem quia ut excepturi exercitationem et deleniti fugit. A animi nulla non ipsa porro et culpa consectetur.</p>
-        </div>
+                <div className='salon-description'>
+                    <p>Nous sommes un salon de tatouage et de piercing situé à Saint-Malo, en Bretagne. Nous sommes spécialisés dans les tatouages et les piercings de qualité. Nous vous proposons un large choix de tatouages et de piercings, ainsi que des bijoux de qualité.
+                    </p>
+                    
+                    <p>Notre équipe est composée d'un tatoueur et d'une pierceurse professionnels, qui vous conseilleront et vous guideront dans votre choix. Nous vous accueillons dans un cadre chaleureux et convivial, dans le respect des normes sanitaires et de sécurité.</p>
 
-        <div className='logos'>
-            <div className='boogi-ink-logo'>
-                <h2 className='boogi-ink-logo-fonts'>BoOgi 'InK Tattoo</h2>
-                <img src={boogiinklogo} className="boogiink-image" alt="tattoo" />
+                    <p>Nous sommes ouverts du mardi au samedi de 12h à 19h. Nous sommes situés au 2 rue de la République, à Saint-Malo. N'hésitez pas à nous contacter pour plus d'informations.</p>
+                    
+                    <p>Vous pouvez également nous suivre sur Facebook et Instagram pour découvrir nos dernières réalisations.</p>
+
+                    <p>N'hésitez pas à <a className="redirection-contact" href="/contact">nous contacter</a> pour plus d'informations.</p>
+
+                    <p>À bientôt !</p>
+                </div>
+
             </div>
 
-            <div className='lady-piercing-logo'>
-                <h2 className='lady-piercing-logo-fonts'>Lady Piercing</h2>
-                <img className="lady-piercing-image" src={ladypiercinglogo} alt="piercing" />
+            <div className='logos'>
+                <div className='boogi-ink-logo'>
+                    <h2 className='boogi-ink-logo-fonts'>BoOgi 'InK Tattoo</h2>
+                    <a href="/atelier-tatouage">
+                        <img src={boogiinklogo} className="boogiink-image" alt="tattoo" />
+                    </a>
+                </div>
+
+                <div className='lady-piercing-logo'>
+                    <h2 className='lady-piercing-logo-fonts'>Lady Piercing</h2>
+                    <a href="/espace-piercing">
+                        <img className="lady-piercing-image" src={ladypiercinglogo} alt="piercing" />
+                    </a>
+                </div>
             </div>
         </div>
-        </div>
 
-        <h2>Découvrez nos réalisations</h2>
-        {/* <GoogleMap /> */}
+        <h2 className='slider-title'>Découvrez nos réalisations</h2>
 
         <Slider slides={SliderData} />
     </div>
