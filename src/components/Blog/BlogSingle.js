@@ -1,7 +1,7 @@
 import React from 'react'
 import blogImage1 from './images/blog1.jpg'
 
-const BlogArticle = () => {
+const BlogSingle = () => {
   return (
     <div className='blogSingle'>
 
@@ -24,4 +24,4 @@ const BlogArticle = () => {
   )
 }
 
-export default BlogArticle
+export default BlogSingle

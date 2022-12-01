@@ -8,7 +8,7 @@ import blogImage2 from './images/blog2.jpg'
 import blogImage3 from './images/blog3.jpg'
 import blogImage4 from './images/blog4.jpg'
 
-const BlogSummary = () => {
+const Blog = () => {
   return (
     <div>
       <h1>Blog</h1>
@@ -62,4 +62,4 @@ const BlogSummary = () => {
   )
 }
 
-export default BlogSummary
+export default Blog

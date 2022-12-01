@@ -12,8 +12,8 @@ import TattooWorkShop from './components/TattooWorkShop/TattooWorkShop';
 import PiercingWorkSpace from './components/PiercingWorkSpace/PiercingWorkSpace';
 import Login from './components/Login/Login';
 import SignUp from './components/Login/SignUp';
-import Blog from './components/Blog/BlogSummary';
-import BlogArticle from './components/Blog/BlogArticle';
+import Blog from './components/Blog/Blog';
+import BlogSingle from './components/Blog/BlogSingle';
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
         <Route path="/mon-compte" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/actualites" element={<Blog />} />
-        <Route path="/actualites/article" element={<BlogArticle />} />
+        <Route path="/actualites/article" element={<BlogSingle />} />
       </Routes>
       <Footer />
     </div>
