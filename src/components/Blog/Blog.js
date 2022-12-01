@@ -10,10 +10,14 @@ import blogImage4 from './images/blog4.jpg'
 
 const Blog = () => {
   return (
-    <div>
-      <h1>Blog</h1>
-      <p className='blog-introduction'>Lorem ipsum dolor sit amet. Eum ratione soluta non reprehenderit consequatur vel veniam quia non obcaecati vitae qui labore aspernatur. Nam totam cupiditate et voluptates temporibus sit mollitia alias non optio soluta eos eligendi autem.</p>
-      <div className='blog'>
+    <div className='blog'>
+
+      <div className='blog-introduction'>
+        <h1>Blog</h1>
+        <p>Lorem ipsum dolor sit amet. Eum ratione soluta non reprehenderit consequatur vel veniam quia non obcaecati vitae qui labore aspernatur. Nam totam cupiditate et voluptates temporibus sit mollitia alias non optio soluta eos eligendi autem.</p>
+      </div>
+
+      <div className='blog-card-container'>
 
         <a href='/actualites/article' className="blog-card" target='_blank' >
           <div className="blog-card--image">
