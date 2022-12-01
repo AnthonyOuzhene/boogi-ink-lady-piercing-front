@@ -1,0 +1,60 @@
+.formContainer {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.visitor-book-subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+    font-style: italic;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 0.35em 0.625em 0.75em;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    width: 30%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+fieldset legend {
+    width: auto;
+    padding: 0 10px;
+}
+.radio {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.send {
+    width: 10%;
+}
+
+.stars {
+    padding: 1rem;
+    letter-spacing: 0.3rem;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+
+input[type="date"] {
+    width: 60%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}

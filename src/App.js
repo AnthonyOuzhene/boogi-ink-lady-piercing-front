@@ -12,6 +12,7 @@ import TattooWorkShop from './components/TattooWorkShop/TattooWorkShop';
 import PiercingWorkSpace from './components/PiercingWorkSpace/PiercingWorkSpace';
 import Login from './components/Login/Login';
 import SignUp from './components/Login/SignUp';
+import VisitorBook from './components/VisitorBook/VisitorBook';
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route exact path="/" element={<Login />} />
         <Route path="/mon-compte" element={<Login />} />
-        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/inscription" element={<SignUp />} />
+        <Route path="/livre-d-or" element={<VisitorBook />} />
       </Routes>
       <Footer />
     </div>
