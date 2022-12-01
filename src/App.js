@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/espace-piercing" element={<PiercingWorkSpace />} />
         <Route path="/contact" element={<Contact />} />
         <Route exact path="/" element={<Login />} />
-        <Route path="/mon-compte" element={<Login />} />
+        <Route path="/connexion" element={<Login />} />
         <Route path="/inscription" element={<SignUp />} />
         <Route path="/livre-d-or" element={<VisitorBook />} />
       </Routes>

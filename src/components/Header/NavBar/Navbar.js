@@ -50,7 +50,7 @@ const Navbar = () => {
                         <a href='/contact' onClick={closeMenu}>Contact</a>
                     </li>
                     <li className='nav-item login-icon'>
-                        <a href='/mon-compte' onClick={closeMenu}><AiOutlineUser /></a>
+                        <a href='/connexion' onClick={closeMenu}><AiOutlineUser /></a>
                     </li>
                 </ul>
             </nav>
