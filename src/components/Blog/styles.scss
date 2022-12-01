@@ -29,3 +29,16 @@
 
     box-shadow: 0 0 15px 0 rgb(255, 253, 255);
 }
+
+.blogArticle-image > img {
+    width: 70%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.blogArticle > p {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}

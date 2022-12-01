@@ -12,7 +12,7 @@ const BlogSummary = () => {
       <h1>Blog</h1>
       <div className='blog'>
 
-        <a href='blank' className="blog-card" target='_blank' >
+        <a href='/actualites/article' className="blog-card" target='_blank' >
           <div className="blog-card--image">
             <img src={blogImage1} alt="Tattoo" />
           </div>
