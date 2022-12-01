@@ -56,7 +56,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  transition: 1s;
+  transition: 0.3s;
   scale: 1.2;
   background-color: rgb(240, 0, 180);
   letter-spacing: 2px;
@@ -82,7 +82,7 @@ h1 {
 }
 
 .go-to-signup:hover {
-  transition: 1s;
+  transition: 0.3s;
   scale: 1.2;
   color: rgb(27, 189, 219);
   letter-spacing: 2px;
