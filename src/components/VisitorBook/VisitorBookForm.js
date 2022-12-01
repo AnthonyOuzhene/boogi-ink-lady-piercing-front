@@ -13,7 +13,6 @@ function VisitorBookForm() {
                 <label for="date">Date de passage (facultatif)</label>
                 <input type="date" id="date" name="date"></input><br></br>
 
-
                 <fieldset>
                     <legend for="note">Prestation</legend>
                     <div className="radio">
@@ -30,19 +29,8 @@ function VisitorBookForm() {
                     </div>
                 </fieldset>
 
-                <div className="rating">
-                    <label for="note">Appréciation</label>
-                    <div className="stars">
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </div>
-                </div>
-
-
+                <label for="titre">Projet</label>
+                <input type="text" id="titre" placeholder="Description de votre projet" required></input><br></br>
 
                 <label for="subject">Commentaire</label>
                 <textarea id="subject" name="subject" placeholder="Votre message" required></textarea><br></br>

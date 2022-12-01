@@ -1,7 +1,105 @@
+.visitor-book-title {
+    letter-spacing: 0.2rem;
+}
+
+.visitor-book-container {
+    margin-top: 4rem;
+
+
+    .visitor-book-comment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #e6e6e6;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        width: 60%;
+        margin: 3rem auto;
+        position: relative;
+    }
+
+    .visitor-book-comment-date {
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+
+    .visitor-book-comment-text {
+        margin-bottom: 2rem;
+    }
+
+    .visitor-book-comment-service {
+        font-weight: 300;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .visitor-book-comment-link {
+        font-size: 1rem;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .pagination {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            font-size: 0.5rem;
+        }
+
+        .pagination-number {
+            margin: 0 2rem;
+            font-weight: bold;
+            font-family: 'arial';
+            font-size: 1.2rem;
+            border-radius: 50%;
+            background-color: white;
+            color: black;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            @media (max-width: 768px) {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        .pagination-arrow {
+            margin: 0 5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            margin-left: 8em;
+            margin-right: 8em;
+
+            @media (max-width: 1300px) {
+                margin-left: 2em;
+                margin-right: 2em;
+            }
+        }
+    }
+
+}
+
 .formContainer {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 4rem;
+
+    @media (max-width: 1264px) {
+        width: 100%;
+    }
 }
 
 .visitor-book-subtitle {
@@ -27,27 +125,28 @@ fieldset legend {
     width: auto;
     padding: 0 10px;
 }
+
 .radio {
     display: flex;
     justify-content: space-around;
+
+    @media (max-width: 1264px) {
+        flex-direction: column;
+        line-height: 2rem;
+        margin-top: -1rem;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        line-height: 2rem;
+        margin-top: -1rem;
+    }
 }
 
 .rating {
     padding: 1rem;
     margin-bottom: 1rem;
 }
-
-.send {
-    width: 10%;
-}
-
-.stars {
-    padding: 1rem;
-    letter-spacing: 0.3rem;
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
-}
-
 
 input[type="date"] {
     width: 60%;
@@ -57,4 +156,8 @@ input[type="date"] {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
+}
+
+.send {
+    width: 10%;
 }

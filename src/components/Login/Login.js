@@ -17,7 +17,7 @@ const Login = () => {
 
                 <div className="signUp">
                     <p>Vous voulez nous rejoindre ?</p>
-                    <a href="/inscription">Inscrivez-vous</a>
+                    <a className="go-to-signup" href="/inscription">Inscrivez-vous !</a>
                 </div>
 
             </form>
