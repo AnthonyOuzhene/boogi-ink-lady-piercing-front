@@ -34,7 +34,7 @@
         //border-bottom: dotted 2px white;
 
         p {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: 200;
             margin-bottom: 1.5rem;
             text-align: justify;
@@ -54,6 +54,16 @@
             border: none;
             box-shadow: 0 0 15px 0 rgb(255, 253, 255);
         }
+
+        .blog-card--info {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
     }
 }
 
