@@ -1,0 +1,31 @@
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: row;
+    justify-content: center;
+}
+.blog-card {
+    width: 40%;
+    height: 20%;
+    padding: 1rem;
+    margin: 3em 1em 2em 1em;
+    border-bottom: dotted 2px white;
+
+    p {
+        font-size: 1rem;
+        font-weight: 200;
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-card--image > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.blog-card:hover {
+    border-radius: 1rem;
+    border: none;
+
+    box-shadow: 0 0 15px 0 rgb(255, 253, 255);
+}
