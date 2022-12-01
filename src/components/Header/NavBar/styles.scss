@@ -11,6 +11,7 @@
     transition: .3s ease-in;
     overflow: hidden;
     font-size: 1.3rem;
+    margin-top: 1rem;
 }
 
 .header .navbar {
@@ -78,12 +79,13 @@ a {
             display: flex;
             justify-content: left;
             z-index: 5;
+            
 
             li {
                 color: white;
                 letter-spacing: -1px;
                 font-size: 1em;
-                text-align: left;
+                text-align: center;
                 margin-bottom: 0.8rem;
 
                 &:hover {
