@@ -108,6 +108,7 @@ a {
     .header .navbar {
         width: 100vw;
         padding: 40px;
+        margin-top: 5px;
     }
 
     .hamburger {
@@ -120,11 +121,15 @@ a {
         top: 85px;
         flex-direction: column;
         background-color: rgba(0, 0, 0, .9);
-        width: 100%;
+        width: 70%;
         height: 90vh;
         z-index: 999;
         text-align: left;
         transition: .3s;
+    }
+
+    .header .nav-item {
+        width: 50%;
     }
 
     .nav-menu.active {
