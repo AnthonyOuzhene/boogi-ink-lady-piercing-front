@@ -20,7 +20,14 @@ const BlogSingle = () => {
 
       <p>Donec nec dolor blandit, tempor nisi at, ornare lorem. Cras et ex sit amet risus aliquet porta ultricies quis metus. Donec ac nulla maximus, euismod neque sit amet, aliquet libero. Suspendisse quis dolor sit amet elit vehicula bibendum lobortis eu libero. Aliquam erat volutpat. Nam ut ligula laoreet, tristique ex molestie, facilisis lectus. Vivamus pretium dui et dapibus dignissim. Suspendisse mattis dictum purus nec rhoncus. Nunc efficitur urna ut ex interdum, a auctor turpis posuere.</p>
 
+      <div className="blog-card--info">
+        <p className="blog-card--date">12/12/2020</p>
+        <p className="blog-card--author">Antho dit le "Zen guy"</p>
+      </div>
+
     </div>
+
+
   )
 }
 
