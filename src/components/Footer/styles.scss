@@ -50,7 +50,7 @@ a {
       margin-bottom: auto;
     }
 
-    @media (max-width: 340px) {
+    @media (max-width: 385px) {
       display: none;
     }
   }
@@ -69,6 +69,7 @@ a {
 .footer-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 8rem;
 
   @media (max-width: 764px) {
@@ -87,11 +88,11 @@ a {
     align-items: center;
     line-height: 2rem;
     letter-spacing: 0.1rem;
+    width: 300px;
 
     @media (max-width: 430px) {
       margin-bottom: 2rem;
       margin-top: 2rem;
-
     }
   }
 

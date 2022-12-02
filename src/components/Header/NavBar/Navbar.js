@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { BiShoppingBag } from 'react-icons/bi'
 import { AiOutlineUser } from 'react-icons/ai'
+import logo from '../images/logo_mobile.png';
 
-import './styles.scss'
+import './styles.scss';
 
 const Navbar = () => {
 
@@ -27,49 +29,55 @@ const Navbar = () => {
 
     return (
         <div className={color ? 'header header-bg' : 'header'}>
-        <div className='header'>
-            <nav className='navbar'>
-                <div className='hamburger' onClick={handleClick}>
-                    {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
-                        : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
-
-                </div>
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className='nav-item'>
-                        <a href='/' onClick={closeMenu}>Home</a>
-                    </li>
-
-                    <div className='link-salons'>
-                    <li className='nav-item'>
-                        <p className='le-salon' onClick={closeMenu}>Le salon</p>
-                    </li>
-                        <div className="dropdown-content">         
-                         <ul>
-                           <li><a href='/atelier-tatouage'>L'atelier Tatouage</a></li>
-                            <li><a href='/espace-piercing'>L'espace Piercing</a></li>
-                         </ul>
-                        </div> 
+            <div className='header'>
+                <nav className='navbar'>
+                    <div className='hamburger' onClick={handleClick}>
+                        {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
+                            : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
                     </div>
 
-                    <li className='nav-item'>
-                        <a href='/la-boutique' onClick={closeMenu}>La boutique</a>
-                    </li>
-                    <li className='nav-item'>
-                        <a href='/actualites' onClick={closeMenu}>Actualités</a>
-                    </li>
-                    <li className='nav-item'>
-                        <a href='/livre-d-or' onClick={closeMenu}>Livre d'or</a>
-                    </li>
-                    <li className='nav-item'>
-                        <a href='/contact' onClick={closeMenu}>Contact</a>
-                    </li>
-                    <li className='nav-item login-icon'>
-                        <a href='/connexion' onClick={closeMenu}><AiOutlineUser /></a>
-                    </li>
-                </ul>
-            </nav>
+                    <a href="/">
+                        <img src={logo} alt="logo mobile" className='logo-burger' />
+                    </a>
 
-        </div>
+                    <a href='/panier' className='basket'><BiShoppingBag className="basket-logo" /></a>
+
+                    <ul className={click ? "nav-menu active" : "nav-menu"}>
+                        <li className='nav-item'>
+                            <a href='/' onClick={closeMenu}>Accueil</a>
+                        </li>
+
+                        <div className='link-salons'>
+                            <li className='nav-item'>
+                                <p className='le-salon' onClick={closeMenu}>Le salon</p>
+                            </li>
+                            <div className="dropdown-content">
+                                <ul>
+                                    <li><a href='/atelier-tatouage'>L'atelier Tatouage</a></li>
+                                    <li><a href='/espace-piercing'>L'espace Piercing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <li className='nav-item'>
+                            <a href='/la-boutique' onClick={closeMenu}>La boutique</a>
+                        </li>
+                        <li className='nav-item'>
+                            <a href='/actualites' onClick={closeMenu}>Actualités</a>
+                        </li>
+                        <li className='nav-item'>
+                            <a href='/livre-d-or' onClick={closeMenu}>Livre d'or</a>
+                        </li>
+                        <li className='nav-item'>
+                            <a href='/contact' onClick={closeMenu}>Contact</a>
+                        </li>
+                        <li className='nav-item login-icon'>
+                            <a href='/connexion' onClick={closeMenu}><AiOutlineUser /></a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
         </div>
     )
 }

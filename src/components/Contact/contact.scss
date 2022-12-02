@@ -10,8 +10,7 @@
 }
 
 // Formulaire de contact
-input[type="text"],
-input[type="email"] {
+input[type="text"], input[type="email"] {
     width: 60%;
     padding: 15px;
     border: 1px solid #ccc;
@@ -22,7 +21,6 @@ input[type="email"] {
     margin-right: 0px;
     margin-left: 0px;
 }
-
 textarea {
     width: 60%;
     height: 150px;
@@ -34,7 +32,6 @@ textarea {
     resize: none;
     margin-top: 6px;
 }
-
 label {
     margin-left: 0px;
     width: 100%;
@@ -54,7 +51,6 @@ input[type="submit"] {
     width: 60%;
     cursor: pointer;
 }
-
 // input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
 //     border: 2px solid rgb(7, 7, 7);
 // }

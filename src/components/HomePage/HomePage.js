@@ -37,6 +37,7 @@ const HomePage = () => (
                 </a>
             </div>
 
+
             <div className='logos'>
                 <div className='boogi-ink-logo'>
                     <h2 className='boogi-ink-logo-fonts'>BoOgi 'InK Tattoo</h2>

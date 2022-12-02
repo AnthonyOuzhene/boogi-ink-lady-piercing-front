@@ -50,6 +50,14 @@
     display: none;
 }
 
+.basket {
+    display: none;
+}
+
+.logo-burger {
+    display: none;
+}
+
 li {
     list-style: none;
 }
@@ -116,11 +124,26 @@ a {
     .header .navbar {
         width: 100vw;
         padding: 40px;
-        margin-top: 5px;
     }
 
     .hamburger {
-        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-burger {
+        display: flex;
+        justify-content: space-around;
+        width: 10em;
+    }
+
+    .basket {
+        display: flex;
+    }
+
+    .basket-logo {
+        width: 1.5em;
+        height: 1.5em;
     }
 
     .nav-menu {
