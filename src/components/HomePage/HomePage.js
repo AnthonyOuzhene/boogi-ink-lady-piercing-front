@@ -20,18 +20,21 @@ const HomePage = () => (
                 <div className='salon-description'>
                     <p>Nous sommes un salon de tatouage et de piercing situé à Saint-Malo, en Bretagne. Nous sommes spécialisés dans les tatouages et les piercings de qualité. Nous vous proposons un large choix de tatouages et de piercings, ainsi que des bijoux de qualité.
                     </p>
-                    
+
                     <p>Notre équipe est composée d'un tatoueur et d'une pierceurse professionnels, qui vous conseilleront et vous guideront dans votre choix. Nous vous accueillons dans un cadre chaleureux et convivial, dans le respect des normes sanitaires et de sécurité.</p>
 
-                    <p>Nous sommes ouverts du mardi au samedi de 12h à 19h. Nous sommes situés au 2 rue de la République, à Saint-Malo. N'hésitez pas à nous contacter pour plus d'informations.</p>
-                    
-                    <p>Vous pouvez également nous suivre sur Facebook et Instagram pour découvrir nos dernières réalisations.</p>
+                    <p>Nous sommes ouverts du mardi au samedi de 12h à 19h. Nous sommes situés au 2 rue de la République, à Saint-Malo.</p>
 
-                    <p>N'hésitez pas à <a className="redirection-contact" href="/contact">nous contacter</a> pour plus d'informations.</p>
+                    <p>Vous pouvez également nous suivre sur Facebook et Instagram pour découvrir nos dernières réalisations.</p>
 
                     <p>À bientôt !</p>
                 </div>
 
+                <a href="/contact">
+                < div >
+                    <p className="redirection-contact">Parlez-nous de votre projet</p>
+                </div>
+                </a>
             </div>
 
             <div className='logos'>

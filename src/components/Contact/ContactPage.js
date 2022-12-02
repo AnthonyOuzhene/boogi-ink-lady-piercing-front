@@ -1,6 +1,5 @@
 import React from 'react'
 import GoogleMap from '../HomePage/GoogleMap'
-import { FaTiktok } from 'react-icons/fa'
 import { BsInstagram } from 'react-icons/bs'
 import { FaFacebook } from 'react-icons/fa'
 import { AiFillMail } from 'react-icons/ai'
@@ -19,10 +18,9 @@ const Contact = () => {
             <div className='social'>
                 <h2> Suivez-nous ! </h2>
                 <div className="social-icons">
-                <a href='rt' target={'blank'}>< FaTiktok /></a>
                 <a href='https://www.instagram.com/julienbourgarit/' target={'blank'}>< BsInstagram /></a>
                 <a href='https://www.facebook.com/julienbourgarit/' target={'blank'}>< FaFacebook /></a>
-                <a href='rt' target={'blank'}>< AiFillMail /></a>
+                <a href='mailto:ladyboogiink@gmail.com' target={'blank'}>< AiFillMail /></a>
                 </div>
             </div>
         </div>

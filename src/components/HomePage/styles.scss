@@ -146,13 +146,52 @@ h2 {
 p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   text-shadow: 0 0 8px black;
 }
 
 .redirection-contact {
-  font-style: italic;
   font-weight: bold;
+  background: #eaeaea;
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 1.5rem;
+  width: 20%;
+  margin: 3rem auto;
+  color: black;
+  box-shadow: 0 0 10px 0 rgb(27, 189, 219);
+
+  @media (max-width: 1500px) {
+    width: 30%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 40%;
+  }
+
+  @media (max-width: 600px) {
+    width: 80%;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+.redirection-contact:hover {
+  background: black;
+  border: 1px solid white;
+  color: white;
+  box-shadow: 0 0 10px 0 rgb(240, 0, 180);
+
+  a {
+    color: white;
+  }
 }
 
 
