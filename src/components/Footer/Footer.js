@@ -31,10 +31,10 @@ const Footer = () => {
             Accueil
           </a>
           <a href="/atelier-tatouage" className="footer-info__tattoo">
-            Atelier tatouage
+            L'atelier tatouage
           </a>
           <a href="/espace-piercing" className="footer-info__piercing">
-            Espace Piercing
+            L'espace Piercing
           </a>
           <a href="/shop" className="footer-info__piercing">
             La boutique
