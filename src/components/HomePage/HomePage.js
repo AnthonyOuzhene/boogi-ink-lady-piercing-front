@@ -31,9 +31,9 @@ const HomePage = () => (
                 </div>
 
                 <a href="/contact">
-                < div >
-                    <p className="redirection-contact">Parlez-nous de votre projet</p>
-                </div>
+                    < div >
+                        <p className="redirection-contact">Parlez-nous de votre projet</p>
+                    </div>
                 </a>
             </div>
 
