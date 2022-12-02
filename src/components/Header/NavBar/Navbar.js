@@ -6,13 +6,27 @@ import './styles.scss'
 
 const Navbar = () => {
 
+    // setting the state of the navbar
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
+    // change navbar color on scroll
+    const [color, setColor] = useState(false)
+    const changeColor = () => {
+        if (window.scrollY >= 80) {
+            setColor(true)
+        } else {
+            setColor(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeColor)
+
+    // close menu on click
     const closeMenu = () => setClick(false)
 
     return (
-        <div>
+        <div className={color ? 'header header-bg' : 'header'}>
         <div className='header'>
             <nav className='navbar'>
                 <div className='hamburger' onClick={handleClick}>
@@ -27,7 +41,7 @@ const Navbar = () => {
 
                     <div className='link-salons'>
                     <li className='nav-item'>
-                        <p onClick={closeMenu}>Le salon</p>
+                        <p className='le-salon' onClick={closeMenu}>Le salon</p>
                     </li>
                         <div className="dropdown-content">         
                          <ul>
