@@ -2,6 +2,8 @@
     margin-top: 3em;
     margin-bottom: 2em;
     text-shadow: 2px 1px 1px rgb(240, 0, 180);
+    letter-spacing: 0.2rem;
+
 }
 
 .lady-piercing-name {
@@ -142,6 +144,12 @@
         height: 100%;
         object-fit: cover;
         box-shadow: 0 0 15px 0 rgb(240, 0, 180);
+        border-radius: 10%;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
     }
 }
 

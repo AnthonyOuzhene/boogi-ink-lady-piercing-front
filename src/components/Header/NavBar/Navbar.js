@@ -44,13 +44,13 @@ const Navbar = () => {
                         <a href='/actualites' onClick={closeMenu}>Actualités</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='/livre-dor' onClick={closeMenu}>Livre d'or</a>
+                        <a href='/livre-d-or' onClick={closeMenu}>Livre d'or</a>
                     </li>
                     <li className='nav-item'>
                         <a href='/contact' onClick={closeMenu}>Contact</a>
                     </li>
                     <li className='nav-item login-icon'>
-                        <a href='/mon-compte' onClick={closeMenu}><AiOutlineUser /></a>
+                        <a href='/connexion' onClick={closeMenu}><AiOutlineUser /></a>
                     </li>
                 </ul>
             </nav>

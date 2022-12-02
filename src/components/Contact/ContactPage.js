@@ -10,7 +10,7 @@ const Contact = () => {
     return (
         <div className='container'>
             <div className='contact'>
-                <h2> Notre salon se situe au :</h2>
+                <h2 className="contact-title"> Notre salon se situe au :</h2>
                 <p> 332 Rue Louis Gillain <br></br>
                     27210 Beuzeville </p>
             </div>

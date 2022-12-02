@@ -9,7 +9,7 @@ const ContactForm = () => {
                 <label for="fname">Nom et prénom</label>
                 <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom" required></input><br></br>
                 
-                <label for="emailAddress">Email</label>
+                <label for="emailAddress">E-mail</label>
                 <input id="emailAddress" type="email" name="email" placeholder="Votre email" required></input><br></br>
 
                 <label for="sujet">Sujet</label>

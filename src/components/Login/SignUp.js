@@ -10,7 +10,7 @@ const SignUp = () => {
         <label for="pseudo">Pseudo</label>
         <input id="pseudo" type="email" name="email" placeholder="Votre pseudo" required></input><br></br>
 
-        <label for="emailAddress">Email</label>
+        <label for="emailAddress">E-mail</label>
         <input id="emailAddress" type="email" name="email" placeholder="Votre email" required></input><br></br>
 
         <label for="password">Mot de passe</label>

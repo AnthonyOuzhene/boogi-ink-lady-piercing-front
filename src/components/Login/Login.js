@@ -6,7 +6,7 @@ const Login = () => {
         <div className='container-login'>
             <h1>Connexion</h1>
             <form className="formContainer" action="/action_page.php">
-                <label for="emailAddress">Email</label>
+                <label for="emailAddress">E-mail</label>
                 <input id="emailAddress" type="email" name="email" placeholder="Votre email" required></input><br></br>
 
                 <label for="password">Mot de passe</label>
@@ -17,7 +17,7 @@ const Login = () => {
 
                 <div className="signUp">
                     <p>Vous voulez nous rejoindre ?</p>
-                    <a href="/sign-up">Inscrivez-vous</a>
+                    <a className="go-to-signup" href="/inscription">Inscrivez-vous !</a>
                 </div>
 
             </form>
