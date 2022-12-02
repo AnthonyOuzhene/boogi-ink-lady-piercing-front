@@ -40,53 +40,40 @@
     }
 
     .pagination {
-        padding-top: 4rem;
         display: flex;
         justify-content: center;
-        margin-top: 2rem;
-        font-size: 1.5rem;
-
-        @media (max-width: 768px) {
-            width: 100%;
-            font-size: 0.5rem;
-        }
-
+        margin: 2rem 0 5rem 0;
+        
         .pagination-number {
-            margin: 0 2rem;
-            font-weight: bold;
-            font-family: 'arial';
-            font-size: 1.2rem;
-            border-radius: 50%;
-            background-color: white;
-            color: black;
-            width: 2.5rem;
-            height: 2.5rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            vertical-align: auto;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            font-size: 2rem;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 0.3rem 0 0.3rem;
             cursor: pointer;
-
-            @media (max-width: 768px) {
-                width: 2rem;
-                height: 2rem;
-            }
         }
 
         .pagination-arrow {
-            margin: 0 5rem;
-            width: 2.5rem;
-            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
             border-radius: 50%;
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             color: black;
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 0 4rem 0 4rem;
             cursor: pointer;
-            margin-left: 8em;
-            margin-right: 8em;
-
-            @media (max-width: 1300px) {
-                margin-left: 2em;
-                margin-right: 2em;
-            }
         }
     }
 

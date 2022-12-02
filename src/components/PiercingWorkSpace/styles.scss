@@ -3,11 +3,10 @@
     margin-bottom: 2em;
     text-shadow: 2px 1px 1px rgb(240, 0, 180);
     letter-spacing: 0.2rem;
-
 }
 
 .lady-piercing-name {
-    font-family: 'Stayola';
+    font-family: "Stayola";
     font-size: 1.5em;
     color: rgb(240, 0, 180);
     text-shadow: 2px 1px 1px black;
@@ -20,7 +19,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     text-align: justify;
@@ -71,7 +70,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     text-align: center;
@@ -80,7 +79,6 @@
     margin: 8rem auto;
     border-top: 1px solid rgb(240, 0, 180);
     max-width: 80vh;
-
 
     .lady-piercing-service-list-title {
         font-size: 2rem;
@@ -112,7 +110,6 @@
     margin-bottom: 1rem;
     margin-top: 6rem;
     font-style: italic;
-
 }
 
 .piercing-gallery {
@@ -160,29 +157,12 @@
 //     box-shadow: 0 0 15px 0 rgb(240, 0, 180);
 // }
 
-
 .lady-piercing-gallery-button {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 2rem auto;
-    max-width: 1064px;
+    justify-content: center;
+    margin: 2rem 0 5rem 0;
 
-
-    .lady-piercing-gallery-button-left {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: rgb(240, 0, 180);
-        color: black;
-        font-size: 2rem;
-        font-weight: 500;
-        cursor: pointer;
-    }
-
+    .lady-piercing-gallery-button-left,
     .lady-piercing-gallery-button-right {
         display: flex;
         justify-content: center;
@@ -194,71 +174,40 @@
         color: black;
         font-size: 2rem;
         font-weight: 500;
+        margin: 0 4rem 0 4rem;
         cursor: pointer;
     }
-}
 
-.lady-piercing-gallery-button-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
-
-    .lady-piercing-gallery-button-number-1 {
+    .lady-piercing-gallery-button-number {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: rgb(240, 0, 180);
-        color: black;
-        font-size: 2rem;
-        font-weight: 500;
-        cursor: pointer;
-        padding: 1.5rem;
-    }
 
-    .lady-piercing-gallery-button-number-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: rgb(240, 0, 180);
-        color: black;
-        font-size: 2rem;
-        font-weight: 500;
-        cursor: pointer;
-        padding: 1.5rem;
-
-    }
-
-    .lady-piercing-gallery-button-number-3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: rgb(240, 0, 180);
-        color: black;
-        font-size: 2rem;
-        font-weight: 500;
-        cursor: pointer;
-        padding: 1.5rem;
+        .lady-piercing-gallery-button-number-1,
+        .lady-piercing-gallery-button-number-2,
+        .lady-piercing-gallery-button-number-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: auto;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: rgb(240, 0, 180);
+            color: black;
+            font-size: 2rem;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 0.3rem 0 0.3rem;
+            cursor: pointer;
+        }
     }
 }
 
 .FAQ {
-
     border-top: 1px solid rgb(240, 0, 180);
     max-width: 964px;
     margin: 6rem auto;
     width: 90%;
-
 
     .FAQ-title {
         font-size: 2rem;

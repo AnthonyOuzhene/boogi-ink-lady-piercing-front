@@ -51,7 +51,6 @@ function VisitorBook() {
                     <p className="pagination-number">1</p>
                     <p className="pagination-number">2</p>
                     <p className="pagination-number">3</p>
-                    <p className="pagination-number">4</p>
                     <FaArrowAltCircleRight className="pagination-arrow" />
                 </div>
             </div>
