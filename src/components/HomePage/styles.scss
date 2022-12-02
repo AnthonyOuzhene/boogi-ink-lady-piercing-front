@@ -46,6 +46,30 @@ h2 {
   margin: 2rem;
 }
 
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: black;
+  opacity: 0.2;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: black;
+  opacity: 0.2;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
 @media screen and (max-width: 1064px) {
   .slider {
     width: 80%;
@@ -127,7 +151,6 @@ h2 {
   transform: translateX(0);
   transition: all 0.5s ease;
 }
-
 
 
 // CSS de boogiink et ladypiercing
@@ -242,7 +265,6 @@ p {
 .presentation-salon {
   margin: 5rem;
   display: block;
-  justify-content: center;
   color: white;
 
   h2 {

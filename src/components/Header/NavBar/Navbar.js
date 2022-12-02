@@ -27,7 +27,7 @@ const Navbar = () => {
 
                     <div className='link-salons'>
                     <li className='nav-item'>
-                        <p onClick={closeMenu}>Le salon</p>
+                        <p className='le-salon' onClick={closeMenu}>Le salon</p>
                     </li>
                         <div className="dropdown-content">         
                          <ul>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { SliderData } from "./SliderData";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import "./styles.scss";
 
 const Slider = () => {
@@ -37,6 +38,8 @@ const Slider = () => {
 
   return (
     <div className="slider">
+      <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
+      <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
       {SliderData.map((slide, index) => {
         return (
           <div
