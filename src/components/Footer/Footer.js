@@ -39,6 +39,9 @@ const Footer = () => {
           <a href="/boutique" className="footer-info__piercing">
             La boutique
           </a>
+          <a href="/actualites" className="footer-info__piercing">
+            Actualités
+          </a>
           <a href="/livre-d-or" className="footer-info__piercing">
             Le livre d'or
           </a>
