@@ -2,16 +2,18 @@
     display: flex;
     justify-content: center;
     position: fixed;
-    height: 20vh;
     width: 100%;
-    height: 20vh;
+    height: 90px;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1;
     transition: .3s ease-in;
     overflow: hidden;
     font-size: 1.3rem;
-    margin-top: 1rem;
+}
+
+.header-bg {
+    background: linear-gradient(90deg, rgba(0,0,0,1) 7%, rgba(25,22,24,1) 35%, rgba(33,28,28,1) 63%, rgba(23,14,14,1) 94%);
 }
 
 .header .navbar {
@@ -19,8 +21,9 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1240px;
-    height: 10%;
-    margin-top: 20px;
+    margin: auto;
+    height: 100%;
+    padding: 0 1rem;
 }
 
 .header .nav-menu a {
