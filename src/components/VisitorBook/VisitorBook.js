@@ -1,50 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './visitorBook.scss';
 import VisitorBookForm from './VisitorBookForm';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
+import axios from 'axios';
 
 
 function VisitorBook() {
+
+    const [comments, setComments] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://localhost:8000/api/comments')
+            .then((response) => {
+                console.log(response.data['hydra:member']);
+                setComments(response.data['hydra:member']);
+            });
+    }, []);
+
     return (
         <div>
+
             <h1 className="visitor-book-title">Le livre d'or</h1>
 
             <h2 className="visitor-book-subtitle">Nos derniers commentaires</h2>
 
             <div className="visitor-book-container">
-                <fieldset className="visitor-book-comment">
-                    <h3 className="visitor-book-comment-name">Jeanne</h3>
-                    <h4 className="visitor-book-comment-date">12/12/2020</h4>
+                {comments.map((comment, i) => {
+                    return (
+                        <fieldset key={i} className="visitor-book-comment">
+                            <h3 className="visitor-book-comment-name">{comment.userId}</h3>
+                            <h4 className="visitor-book-comment-date">{comment.realisationDate}</h4>
 
-                    <p className="visitor-book-comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet nisl nisl sit amet lorem. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet nisl nisl sit amet lorem.</p>
-                    <p className="visitor-book-comment-link">Lire la suite</p>
-                    <legend className="visitor-book-comment-service">Prestation</legend>
+                            <p className="visitor-book-comment-text">{comment.message}</p>
+                            <p className="visitor-book-comment-link">Lire la suite</p>
+                            <legend className="visitor-book-comment-service">{comment.activityName}</legend>
 
-                </fieldset>
-
-                <fieldset className="visitor-book-comment">
-                    <h3 className="visitor-book-comment-name">Jeanne</h3>
-                    <h4 className="visitor-book-comment-date">Le 12/12/2020</h4>
-                    <p className="visitor-book-comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet nisl nisl sit amet lorem. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet nisl nisl sit amet lorem.</p>
-                    <p className="visitor-book-comment-link">Lire la suite</p>
-                    <legend className="visitor-book-comment-service">Prestation</legend>
-                </fieldset>
-
-                <fieldset className="visitor-book-comment">
-                    <h3 className="visitor-book-comment-name">Jeanne</h3>
-                    <h4 className="visitor-book-comment-date">Le 12/12/2020</h4>
-                    <p className="visitor-book-comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet nisl nisl sit amet lorem. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet nisl nisl sit amet lorem.</p>
-                    <p className="visitor-book-comment-link">Lire la suite</p>
-                    <legend className="visitor-book-comment-service">Prestation</legend>
-                </fieldset>
-
-                <fieldset className="visitor-book-comment">
-                    <h3 className="visitor-book-comment-name">Jeanne</h3>
-                    <h4 className="visitor-book-comment-date">Le 12/12/2020</h4>
-                    <p className="visitor-book-comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet nisl nisl sit amet lorem. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquet nisl nisl sit amet lorem.</p>
-                    <p className="visitor-book-comment-link">Lire la suite</p>
-                    <legend className="visitor-book-comment-service">Prestation</legend>
-                </fieldset>
+                        </fieldset>
+                    )
+                })}
 
                 <div className="pagination">
                     <FaArrowAltCircleLeft className="pagination-arrow" />

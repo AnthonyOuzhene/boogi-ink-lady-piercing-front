@@ -26,8 +26,6 @@ const BlogSingle = () => {
       </div>
 
     </div>
-
-
   )
 }
 
