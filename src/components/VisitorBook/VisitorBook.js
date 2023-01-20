@@ -12,7 +12,7 @@ function VisitorBook() {
     useEffect(() => {
         axios.get('https://localhost:8000/api/comments')
             .then((response) => {
-                console.log(response.data['hydra:member']);
+                //console.log(response.data['hydra:member']);
                 setComments(response.data['hydra:member']);
             });
     }, []);
@@ -28,12 +28,17 @@ function VisitorBook() {
                 {comments.map((comment, i) => {
                     return (
                         <fieldset key={i} className="visitor-book-comment">
-                            <h3 className="visitor-book-comment-name">{comment.userId}</h3>
-                            <h4 className="visitor-book-comment-date">{comment.realisationDate}</h4>
+                            <h3 className="visitor-book-comment-name">{comment.user_id.name}</h3>
+                            <h4 className="visitor-book-comment-date">{comment.comment_date}</h4>
+
+                            <p>
+                                <span className="visitor-book-comment-title">{comment.title}</span>
+                            </p>
 
                             <p className="visitor-book-comment-text">{comment.message}</p>
                             <p className="visitor-book-comment-link">Lire la suite</p>
-                            <legend className="visitor-book-comment-service">{comment.activityName}</legend>
+                            
+                            <legend className="visitor-book-comment-service">{comment.activity_name.name}</legend>
 
                         </fieldset>
                     )
