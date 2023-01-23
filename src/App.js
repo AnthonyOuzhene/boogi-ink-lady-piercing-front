@@ -1,7 +1,11 @@
 // Import des modules React
-import React from 'react';
 import './App.css';
+
+// Import des modules React Router
 import { Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUserIsConnected } from './actions/actions';
+import React, { useEffect } from "react";
 
 // Import des composants
 import Contact from './components/Contact/ContactPage';
@@ -16,25 +20,38 @@ import VisitorBook from './components/VisitorBook/VisitorBook';
 import Blog from './components/Blog/Blog';
 import BlogSingle from './components/Blog/BlogSingle';
 
-const App = () => {
-  return (
-    <div className='App'>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/atelier-tatouage" element={<TattooWorkShop />} />
-        <Route path="/espace-piercing" element={<PiercingWorkSpace />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route exact path="/" element={<Login />} />
-        <Route path="/connexion" element={<Login />} />
-        <Route path="/inscription" element={<SignUp />} />
-        <Route path="/livre-d-or" element={<VisitorBook />} />
-        <Route path="/actualites" element={<Blog />} />
-        <Route path="/actualites/article" element={<BlogSingle />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
-}
 
-export default App;
+  const App = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      const token = sessionStorage.getItem('token');
+      if (token) {
+        dispatch(setUserIsConnected(true));
+      }
+      else {
+        dispatch(setUserIsConnected(false));
+      }
+    });
+
+    return (
+      <div className='App'>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="/atelier-tatouage" element={<TattooWorkShop />} />
+          <Route path="/espace-piercing" element={<PiercingWorkSpace />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route exact path="/" element={<Login />} />
+          <Route path="/connexion" element={<Login />} />
+          <Route path="/inscription" element={<SignUp />} />
+          <Route path="/livre-d-or" element={<VisitorBook />} />
+          <Route path="/actualites" element={<Blog />} />
+          <Route path="/actualites/article" element={<BlogSingle />} />
+        </Routes>
+        <Footer />
+      </div>
+    );
+  }
+
+  export default App;
