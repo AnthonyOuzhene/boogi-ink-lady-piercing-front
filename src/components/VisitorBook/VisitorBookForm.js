@@ -1,6 +1,7 @@
 import React from 'react';
 
 function VisitorBookForm() {
+
     return (
         <div>
             <form className="formContainer" action="/action_page.php">

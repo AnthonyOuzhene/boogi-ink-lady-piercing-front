@@ -17,47 +17,48 @@ function VisitorBook() {
             });
     }, []);
 
-    return (
-        <div>
 
-            <h1 className="visitor-book-title">Le livre d'or</h1>
+        return (
+            <div>
 
-            <h2 className="visitor-book-subtitle">Nos derniers commentaires</h2>
+                <h1 className="visitor-book-title">Le livre d'or</h1>
 
-            <div className="visitor-book-container">
-                {comments.map((comment, i) => {
-                    return (
-                        <fieldset key={i} className="visitor-book-comment">
-                            <h3 className="visitor-book-comment-name">{comment.user_id.name}</h3>
-                            <h4 className="visitor-book-comment-date">{comment.comment_date}</h4>
+                <h2 className="visitor-book-subtitle">Nos derniers commentaires</h2>
 
-                            <p>
-                                <span className="visitor-book-comment-title">{comment.title}</span>
-                            </p>
+                <div className="visitor-book-container">
+                    {comments.map((comment, i) => {
+                        return (
+                            <fieldset key={i} className="visitor-book-comment">
+                                <h3 className="visitor-book-comment-name">{comment.user_id.name}</h3>
+                                <h4 className="visitor-book-comment-date">{comment.comment_date}</h4>
 
-                            <p className="visitor-book-comment-text">{comment.message}</p>
-                            <p className="visitor-book-comment-link">Lire la suite</p>
-                            
-                            <legend className="visitor-book-comment-service">{comment.activity_name.name}</legend>
+                                <p>
+                                    <span className="visitor-book-comment-title">{comment.title}</span>
+                                </p>
 
-                        </fieldset>
-                    )
-                })}
+                                <p className="visitor-book-comment-text">{comment.message}</p>
+                                <p className="visitor-book-comment-link">Lire la suite</p>
 
-                <div className="pagination">
-                    <FaArrowAltCircleLeft className="pagination-arrow" />
-                    <p className="pagination-number">1</p>
-                    <p className="pagination-number">2</p>
-                    <p className="pagination-number">3</p>
-                    <FaArrowAltCircleRight className="pagination-arrow" />
+                                <legend className="visitor-book-comment-service">{comment.activity_name.name}</legend>
+
+                            </fieldset>
+                        )
+                    })}
+
+                    <div className="pagination">
+                        <FaArrowAltCircleLeft className="pagination-arrow" />
+                        <p className="pagination-number">1</p>
+                        <p className="pagination-number">2</p>
+                        <p className="pagination-number">3</p>
+                        <FaArrowAltCircleRight className="pagination-arrow" />
+                    </div>
                 </div>
+
+                <h2 className="visitor-book-subtitle">Partagez votre expérience</h2>
+
+                <VisitorBookForm />
             </div>
+        )
+    }
 
-            <h2 className="visitor-book-subtitle">Partagez votre expérience</h2>
-
-            <VisitorBookForm />
-        </div>
-    )
-}
-
-export default VisitorBook
+    export default VisitorBook
