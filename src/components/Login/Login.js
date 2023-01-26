@@ -26,7 +26,7 @@ const Login = () => {
             }
         )
             .then(function (response) {
-                //window.location.href = '/'
+                window.location.href = '/'
 
                 console.log(response);
                 sessionStorage.setItem('token', response.data.token);

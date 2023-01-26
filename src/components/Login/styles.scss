@@ -3,7 +3,9 @@ h1 {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"]
+{
   width: 60%;
   padding: 15px;
   border: 1px solid #ccc;
@@ -91,10 +93,26 @@ h1 {
 
 }
 
+.error {
+  width: auto;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+
+  @media screen and (min-width: 940px) {
+    width: 60%;
+    margin-left: 8em;
+  }
+}
+
 @media screen and (max-width:940px) {
 
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="text"]
+   {
     width: 70%;
   }
 
