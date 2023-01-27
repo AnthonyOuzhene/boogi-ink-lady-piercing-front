@@ -9,7 +9,7 @@ import tattoo3 from './images/tattoo3.jpg';
 import tattoo4 from './images/tattoo4.jpg';
 import tattoo5 from './images/tattoo5.jpg';
 import tattoo6 from './images/tattoo6.jpg';
-import { FaArrowAltCircleDown, FaArrowAltCircleLeft, FaArrowAltCircleRight, FaArrowAltCircleUp } from 'react-icons/fa';
+import { FaArrowAltCircleDown, FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 
 const TattooWorkShop = () => {

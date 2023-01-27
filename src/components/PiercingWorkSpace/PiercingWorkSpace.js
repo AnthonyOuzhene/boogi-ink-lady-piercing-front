@@ -9,7 +9,7 @@ import piercing3 from './images/piercing3.jpg';
 import piercing4 from './images/piercing4.jpg';
 import piercing5 from './images/piercing5.jpg';
 import piercing6 from './images/piercing6.jpg';
-import { FaArrowAltCircleDown, FaArrowAltCircleLeft, FaArrowAltCircleRight, FaArrowAltCircleUp } from 'react-icons/fa';
+import { FaArrowAltCircleDown, FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 
 const PiercingWorkSpace = () => {

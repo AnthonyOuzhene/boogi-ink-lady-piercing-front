@@ -10,7 +10,7 @@ function VisitorBook() {
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
-        axios.get('https://localhost:8000/api/comments')
+        axios.get('http://localhost:8000/api/comments')
             .then((response) => {
                 //console.log(response.data['hydra:member']);
                 setComments(response.data['hydra:member']);

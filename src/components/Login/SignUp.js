@@ -1,10 +1,36 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignUp = () => {
 
   const url = 'http://localhost:8000/api';
+
+  const notifySuccessSignIn = () => {
+    toast.success('Inscription réussie !', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
+  };
+  const notifyErrorSignIn = () => {
+    toast.error('Inscription échouée !', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
+  };
+
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,7 +51,6 @@ const SignUp = () => {
     else if (password !== passwordConfirm) { setErrorMessages('Les mots de passe ne correspondent pas'); }
 
     else {
-      console.log('ok');
       axios.post(url + "/users", JSON.stringify(
         {
           name: name,
@@ -41,66 +66,86 @@ const SignUp = () => {
         }
       )
         .then(function (response) {
-          window.location.href = '/'
           console.log(response);
+          notifySuccessSignIn();
+          setTimeout(function () { window.location.href = '/' }, 2000);
         })
-
+        
         .catch(function (error) {
           console.log(error);
+          notifyErrorSignIn();
         }
         );
+
     }
+
   }
 
 
-
   return (
-    <div className='container'>
-      <h1>Inscription</h1>
 
-      <form className="formContainer" onSubmit={handleSubmitSignUp}>
+    <div className="toast">
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        limit={1}
+      />
 
-        <label className="pseudo">Pseudo</label>
-        <input id="pseudo"
-          type="text"
-          name="name"
-          placeholder="Votre pseudo" required
-          onChange={(e) => setName(e.target.value)}
+
+      <div className='container'>
+        <h1>Inscription</h1>
+
+        <form className="formContainer" onSubmit={handleSubmitSignUp}>
+
+          <label className="pseudo">Pseudo</label>
+          <input id="pseudo"
+            type="text"
+            name="name"
+            placeholder="Votre pseudo" required
+            onChange={(e) => setName(e.target.value)}
           >
-        </input>
-        <br></br>
+          </input>
+          <br></br>
 
-        <label className="emailAddress">E-mail</label>
-        <input id="emailAddress"
-          type="email"
-          name="email"
-          placeholder="Votre email" required
-          onChange={(e) => setEmail(e.target.value)}
-          >
-        </input><br></br>
-
-        <label className="password">Mot de passe</label>
-        <input id="password"
-          type="password"
-          name="password"
-          placeholder="Votre mot de passe" required
-          onChange={(e) => setPassword(e.target.value)}
+          <label className="emailAddress">E-mail</label>
+          <input id="emailAddress"
+            type="email"
+            name="email"
+            placeholder="Votre email" required
+            onChange={(e) => setEmail(e.target.value)}
           >
           </input><br></br>
 
-        <label className="password">Confirmer le mot de passe</label>
-        <input id="confirmPassword"
-          type="password"
-          name="confirmPassword"
-          placeholder="Confirmer le mot de passe" required
-          onChange={(e) => setPasswordConfirm(e.target.value)}
+          <label className="password">Mot de passe</label>
+          <input id="password"
+            type="password"
+            name="password"
+            placeholder="Votre mot de passe" required
+            onChange={(e) => setPassword(e.target.value)}
           >
-        </input><br></br>
+          </input><br></br>
 
-        <input type="submit" value="Rejoindre"></input>
-        <div className="error">{errorMessages}</div>
+          <label className="password">Confirmer le mot de passe</label>
+          <input id="confirmPassword"
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirmer le mot de passe" required
+            onChange={(e) => setPasswordConfirm(e.target.value)}
+          >
+          </input><br></br>
 
-      </form>
+          <input type="submit" value="Rejoindre"></input>
+          <div className="error">{errorMessages}</div>
+
+        </form>
+      </div>
     </div>
   )
 }
