@@ -70,6 +70,15 @@ a {
     font-size: 1.5rem;
 }
 
+.logout-icon {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
+    //margin-bottom: 1rem;
+
+}
+
 // Sous-menu
 .link-salons {
     position: relative;
@@ -175,4 +184,5 @@ a {
         cursor: pointer;
         color: black;
     }
+
 }

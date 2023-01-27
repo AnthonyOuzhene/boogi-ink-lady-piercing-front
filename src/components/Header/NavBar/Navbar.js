@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { BiShoppingBag } from 'react-icons/bi';
-import { AiOutlineUser } from 'react-icons/ai';
+import { AiOutlineUser, AiOutlineLogout } from 'react-icons/ai';
 import logo from '../images/logo_mobile.png';
-import { useSelector } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { setUserIsConnected } from '../../../actions/actions';
 import './styles.scss';
 
 const Navbar = () => {
+
+    const dispatch = useDispatch();
 
     const userIsConnected = useSelector((state) => state.userIsConnected);
     console.log(userIsConnected);
@@ -82,13 +84,25 @@ const Navbar = () => {
                                 <a href='/connexion' onClick={closeMenu}><AiOutlineUser /></a>
                             </li>
                         )
-                            }
+                        }
                         {userIsConnected && userIsAdmin && (
                             <li className='nav-item'>
                                 <a href='http://localhost:8000/admin' onClick={closeMenu}>Backoffice</a>
                             </li>
                         )}
+
+                        {userIsConnected && (
+                            <li className='nav-item logout-icon' onClick={() => {
+                                sessionStorage.removeItem('token');
+                                sessionStorage.removeItem('userInfos');
+                                dispatch(setUserIsConnected(false));
+                            }}>
+                                <a href='/connexion'><AiOutlineLogout /></a>
+                            </li>
+                        )}
+
                     </ul>
+
                 </nav>
 
             </div>
