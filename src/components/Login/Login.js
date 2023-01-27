@@ -73,7 +73,7 @@ const Login = () => {
                         sessionStorage.setItem('userInfos', JSON.stringify(userInfos));
                         sessionStorage.setItem('roles', JSON.stringify(roles));
 
-                        //window.location.href = '/';
+                        window.location.href = '/';
                     })
                     .catch(function (error) {
                         console.log(error);
