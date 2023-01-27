@@ -4,7 +4,7 @@ import './App.css';
 // Import des modules React Router
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setUserIsConnected } from './actions/actions';
+import { setUserIsConnected, setUserIsAdmin } from './actions/actions';
 import React, { useEffect } from "react";
 
 // Import des composants
@@ -21,37 +21,59 @@ import Blog from './components/Blog/Blog';
 import BlogSingle from './components/Blog/BlogSingle';
 
 
-  const App = () => {
-    const dispatch = useDispatch();
+const App = () => {
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-      const token = sessionStorage.getItem('token');
-      if (token) {
-        dispatch(setUserIsConnected(true));
-      }
-      else {
-        dispatch(setUserIsConnected(false));
-      }
-    });
+  useEffect(() => {
+    const token = sessionStorage.getItem('token');
+    const role = sessionStorage.getItem('userInfos');
+    console.log(role);
 
-    return (
-      <div className='App'>
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route path="/atelier-tatouage" element={<TattooWorkShop />} />
-          <Route path="/espace-piercing" element={<PiercingWorkSpace />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route exact path="/" element={<Login />} />
-          <Route path="/connexion" element={<Login />} />
-          <Route path="/inscription" element={<SignUp />} />
-          <Route path="/livre-d-or" element={<VisitorBook />} />
-          <Route path="/actualites" element={<Blog />} />
-          <Route path="/actualites/article" element={<BlogSingle />} />
-        </Routes>
-        <Footer />
-      </div>
-    );
-  }
+  
+    if ((token) || role === 'ROLE_ADMIN') {
+      dispatch(setUserIsConnected(true));
+      dispatch(setUserIsAdmin(true));
+    }
+    else if ((token) && role === 'ROLE_USER')
+    {
+      dispatch(setUserIsConnected(true));
+      dispatch(setUserIsAdmin(false));
+    }
+    else {
+      dispatch(setUserIsConnected(false));
+      dispatch(setUserIsAdmin(false));
+    }
+  }, [dispatch]);
 
-  export default App;
+  
+
+
+
+
+
+
+
+
+
+
+  return (
+    <div className='App'>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/atelier-tatouage" element={<TattooWorkShop />} />
+        <Route path="/espace-piercing" element={<PiercingWorkSpace />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route exact path="/" element={<Login />} />
+        <Route path="/connexion" element={<Login />} />
+        <Route path="/inscription" element={<SignUp />} />
+        <Route path="/livre-d-or" element={<VisitorBook />} />
+        <Route path="/actualites" element={<Blog />} />
+        <Route path="/actualites/article" element={<BlogSingle />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
+
+export default App;

@@ -51,7 +51,7 @@ const Login = () => {
             }
         )
             .then(function (response) {
-                window.location.href = '/'
+
                 console.log(response);
                 notifySuccessLogin();
                 sessionStorage.setItem('token', response.data.token);
@@ -69,7 +69,9 @@ const Login = () => {
                         console.log(response);
                         const userInfos = response.data.find(user => user.email === email);
                         console.log(userInfos);
-                        sessionStorage.setItem('userInfos', JSON.stringify(userInfos));
+                        sessionStorage.setItem('userInfos', JSON.stringify(userInfos), userInfos.roles[0]);
+
+                        window.location.href = '/';
                     })
                     .catch(function (error) {
                         console.log(error);

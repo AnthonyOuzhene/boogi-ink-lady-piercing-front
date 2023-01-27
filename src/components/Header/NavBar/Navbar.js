@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import { BiShoppingBag } from 'react-icons/bi'
-import { AiOutlineUser } from 'react-icons/ai'
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { BiShoppingBag } from 'react-icons/bi';
+import { AiOutlineUser } from 'react-icons/ai';
 import logo from '../images/logo_mobile.png';
+import { useSelector } from 'react-redux';
 
 import './styles.scss';
 
 const Navbar = () => {
+
+    const userIsConnected = useSelector((state) => state.userIsConnected);
+    console.log(userIsConnected);
+    const userIsAdmin = useSelector((state) => state.userIsAdmin);
+    console.log(userIsAdmin);
 
     // setting the state of the navbar
     const [click, setClick] = useState(false)
@@ -71,9 +77,17 @@ const Navbar = () => {
                         <li className='nav-item'>
                             <a href='/contact' onClick={closeMenu}>Contact</a>
                         </li>
-                        <li className='nav-item login-icon'>
-                            <a href='/connexion' onClick={closeMenu}><AiOutlineUser /></a>
-                        </li>
+                        {!userIsConnected && (
+                            <li className='nav-item login-icon'>
+                                <a href='/connexion' onClick={closeMenu}><AiOutlineUser /></a>
+                            </li>
+                        )
+                            }
+                        {userIsConnected && userIsAdmin && (
+                            <li className='nav-item'>
+                                <a href='http://localhost:8000/admin' onClick={closeMenu}>Backoffice</a>
+                            </li>
+                        )}
                     </ul>
                 </nav>
 
