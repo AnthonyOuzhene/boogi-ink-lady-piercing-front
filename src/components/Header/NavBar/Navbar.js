@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { BiShoppingBag } from 'react-icons/bi';
-import { AiOutlineUser, AiOutlineLogout } from 'react-icons/ai';
+import { ImExit } from 'react-icons/im';
+import { SlLogin } from 'react-icons/sl';
 import logo from '../images/logo_mobile.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUserIsConnected } from '../../../actions/actions';
@@ -81,7 +82,7 @@ const Navbar = () => {
                         </li>
                         {!userIsConnected && (
                             <li className='nav-item login-icon'>
-                                <a href='/connexion' onClick={closeMenu}><AiOutlineUser /></a>
+                                <a href='/connexion' onClick={closeMenu}><SlLogin /></a>
                             </li>
                         )
                         }
@@ -95,9 +96,10 @@ const Navbar = () => {
                             <li className='nav-item logout-icon' onClick={() => {
                                 sessionStorage.removeItem('token');
                                 sessionStorage.removeItem('userInfos');
+                                sessionStorage.removeItem('roles');
                                 dispatch(setUserIsConnected(false));
                             }}>
-                                <a href='/connexion'><AiOutlineLogout /></a>
+                                <a href='/connexion'><ImExit /></a>
                             </li>
                         )}
 
