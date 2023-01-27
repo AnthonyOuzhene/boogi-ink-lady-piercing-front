@@ -26,22 +26,28 @@ const App = () => {
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
-    const role = sessionStorage.getItem('userInfos');
+    const role = sessionStorage.getItem('roles');
     console.log(role);
+    //console.log(token);
 
   
-    if ((token) || role === 'ROLE_ADMIN') {
+    if ((token) && role === '["ROLE_ADMIN","ROLE_USER"]') {
       dispatch(setUserIsConnected(true));
       dispatch(setUserIsAdmin(true));
+      console.log('admin');
     }
-    else if ((token) && role === 'ROLE_USER')
+    else if ((token) && role === '["ROLE_USER"]')
     {
       dispatch(setUserIsConnected(true));
       dispatch(setUserIsAdmin(false));
+      console.log('user');
+
     }
     else {
       dispatch(setUserIsConnected(false));
       dispatch(setUserIsAdmin(false));
+      console.log('rien');
+
     }
   }, [dispatch]);
 
