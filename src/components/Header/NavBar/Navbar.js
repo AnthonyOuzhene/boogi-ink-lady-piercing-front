@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { BiShoppingBag } from 'react-icons/bi';
 import { ImExit } from 'react-icons/im';
+import { AiOutlineUser } from 'react-icons/ai';
 import { SlLogin } from 'react-icons/sl';
 import logo from '../images/logo_mobile.png';
 import { useSelector, useDispatch } from 'react-redux';
@@ -80,28 +81,45 @@ const Navbar = () => {
                         <li className='nav-item'>
                             <a href='/contact' onClick={closeMenu}>Contact</a>
                         </li>
+
                         {!userIsConnected && (
                             <li className='nav-item login-icon'>
                                 <a href='/connexion' onClick={closeMenu}><SlLogin /></a>
                             </li>
-                        )
-                        }
-                        {userIsConnected && userIsAdmin && (
-                            <li className='nav-item'>
-                                <a href='http://localhost:8000/admin' onClick={closeMenu}>Backoffice</a>
-                            </li>
                         )}
 
-                        {userIsConnected && (
-                            <li className='nav-item logout-icon' onClick={() => {
-                                sessionStorage.removeItem('token');
-                                sessionStorage.removeItem('userInfos');
-                                sessionStorage.removeItem('roles');
-                                dispatch(setUserIsConnected(false));
-                            }}>
-                                <a href='/connexion'><ImExit /></a>
-                            </li>
-                        )}
+
+                        <div className='link-salons'>
+                            {userIsConnected && (
+                                <li className='nav-item' onClick={closeMenu}>
+                                    <AiOutlineUser />
+                                </li>
+                            )}
+                            <div className='dropdown-content'>
+                                <ul>
+                                    <li>
+                                        <a href='/profile' onClick={closeMenu}>Mon profile</a>
+                                    </li>
+                                    {userIsConnected && (
+                                        <li className='nav-item logout-icon' onClick={() => {
+                                            sessionStorage.removeItem('token');
+                                            sessionStorage.removeItem('userInfos');
+                                            sessionStorage.removeItem('roles');
+                                            dispatch(setUserIsConnected(false));
+                                        }}>
+                                            <a href='/connexion'>Déconnexion<ImExit /></a>
+                                        </li>
+                                    )}
+                                    {userIsConnected && userIsAdmin && (
+                                        <li className='nav-item'>
+                                            <a href='http://localhost:8000/admin' onClick={closeMenu}>Backoffice</a>
+                                        </li>
+                                    )}
+
+                                </ul>
+                            </div>
+                        </div>
+
 
                     </ul>
 
