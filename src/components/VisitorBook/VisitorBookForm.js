@@ -9,6 +9,9 @@ function VisitorBookForm() {
 
     const userIsConnected = useSelector((state) => state.userIsConnected);
 
+    const userName = JSON.parse(sessionStorage.getItem('userName'));
+    //console.log(userName);
+
     const url = 'http://localhost:8000/api/comments';
 
     const notifySuccess = () => {
@@ -42,7 +45,7 @@ function VisitorBookForm() {
         else if (message.length < 10) { setErrorMessages('Le message doit contenir au moins 10 caractères'); }
 
         else {
-            
+
             axios.post(url, JSON.stringify(
                 {
                     name: name,
@@ -91,9 +94,11 @@ function VisitorBookForm() {
 
                         <label className="fname">Pseudo</label>
                         <input
-                            type="text"
+                            type="readonly"
                             id="pseudo"
                             placeholder="Votre pseudo" required
+                            disabled
+                            value={userName}
                             onChange={(e) => setName(e.target.value)}
                         >
                         </input>
