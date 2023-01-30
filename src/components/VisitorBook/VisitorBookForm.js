@@ -26,7 +26,6 @@ function VisitorBookForm() {
         })
     };
 
-    const [name, setName] = useState('');
     const [realisationDate, setRealisationDate] = useState('');
     const [activity, setActivity] = useState('');
     const [title, setTitle] = useState('');
@@ -37,10 +36,9 @@ function VisitorBookForm() {
         setErrorMessages('');
         e.preventDefault();
 
-        if (name === '' || realisationDate === '' || activity === '' || title === '' || message === '') {
+        if (realisationDate === '' || activity === '' || title === '' || message === '') {
             setErrorMessages('Veuillez remplir tous les champs');
         }
-        else if (name.length < 3) { setErrorMessages('Le pseudo doit contenir au moins 3 caractères'); }
         else if (title.length < 5) { setErrorMessages('Le titre doit contenir au moins 5 caractères'); }
         else if (message.length < 10) { setErrorMessages('Le message doit contenir au moins 10 caractères'); }
 
@@ -48,7 +46,6 @@ function VisitorBookForm() {
 
             axios.post(url, JSON.stringify(
                 {
-                    name: name,
                     realisationDate: realisationDate,
                     activity: activity,
                     title: title,
@@ -99,7 +96,6 @@ function VisitorBookForm() {
                             placeholder="Votre pseudo" required
                             disabled
                             value={userName}
-                            onChange={(e) => setName(e.target.value)}
                         >
                         </input>
                         <br></br>
