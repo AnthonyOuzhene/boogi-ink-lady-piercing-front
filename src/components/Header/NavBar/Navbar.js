@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { BiShoppingBag } from 'react-icons/bi';
-import { ImExit } from 'react-icons/im';
+//import { ImExit } from 'react-icons/im';
 import { AiOutlineUser } from 'react-icons/ai';
 import { SlLogin } from 'react-icons/sl';
 import logo from '../images/logo_mobile.png';
@@ -57,17 +57,14 @@ const Navbar = () => {
                             <a href='/' onClick={closeMenu}>Accueil</a>
                         </li>
 
-                        <div className='link-salons'>
-                            <li className='nav-item'>
-                                <p className='le-salon' onClick={closeMenu}>Le salon</p>
-                            </li>
-                            <div className="dropdown-content">
-                                <ul>
-                                    <li><a href='/atelier-tatouage'>L'atelier Tatouage</a></li>
-                                    <li><a href='/espace-piercing'>L'espace Piercing</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <li className='nav-item top-drop'>
+                            <li onClick={closeMenu}>Le salon</li>
+                            <ul className="dropdown-content">
+                                <li><a href='/atelier-tatouage'>L'atelier Tatouage</a></li>
+                                <li><a href='/espace-piercing'>L'espace Piercing</a></li>
+                            </ul>
+                        </li>
+
 
                         <li className='nav-item'>
                             <a href='/la-boutique' onClick={closeMenu}>La boutique</a>
@@ -82,51 +79,52 @@ const Navbar = () => {
                             <a href='/contact' onClick={closeMenu}>Contact</a>
                         </li>
 
-                        {!userIsConnected && (
-                            <li className='nav-item login-icon'>
-                                <a href='/connexion' onClick={closeMenu}><SlLogin /></a>
-                            </li>
-                        )}
 
+                        <li className='nav-item top-drop'>
 
-                        <div className='link-salons'>
+                            {!userIsConnected && (
+                                <li className='login-icon'>
+                                    <a href='/connexion' onClick={closeMenu}><SlLogin /></a>
+                                </li>
+                            )}
+
                             {userIsConnected && (
-                                <li className='nav-item' onClick={closeMenu}>
+                                <li className='' onClick={closeMenu}>
                                     <AiOutlineUser />
                                 </li>
                             )}
-                            <div className='dropdown-content'>
-                                <ul>
-                                    <li>
-                                        <a href='/profile' onClick={closeMenu}>Mon profile</a>
+
+                            <ul className="dropdown-content">
+
+                                {userIsConnected && (
+                                    <li className='' onClick={() => {
+                                        sessionStorage.removeItem('token');
+                                        sessionStorage.removeItem('userInfos');
+                                        sessionStorage.removeItem('roles');
+                                        dispatch(setUserIsConnected(false));
+                                    }}>
+                                        <a href='/connexion'>Deconnexion</a>
                                     </li>
-                                    {userIsConnected && (
-                                        <li className='nav-item logout-icon' onClick={() => {
-                                            sessionStorage.removeItem('token');
-                                            sessionStorage.removeItem('userInfos');
-                                            sessionStorage.removeItem('roles');
-                                            dispatch(setUserIsConnected(false));
-                                        }}>
-                                            <a href='/connexion'>Déconnexion<ImExit /></a>
-                                        </li>
-                                    )}
-                                    {userIsConnected && userIsAdmin && (
-                                        <li className='nav-item'>
-                                            <a href='http://localhost:8000/admin' onClick={closeMenu}>Backoffice</a>
-                                        </li>
-                                    )}
+                                )}
+                                {userIsConnected && (
+                                    <li>
+                                        <a href='/profil' onClick={closeMenu}>Mon profil</a>
+                                    </li>
+                                )}
+                                {userIsConnected && userIsAdmin && (
+                                    <li>
+                                        <a href='http://localhost:8000/admin' onClick={closeMenu}>Backoffice</a>
+                                    </li>
+                                )}
+                            </ul>
 
-                                </ul>
-                            </div>
-                        </div>
-
+                        </li>
 
                     </ul>
-
                 </nav>
 
             </div>
-        </div>
+        </div >
     )
 }
 
