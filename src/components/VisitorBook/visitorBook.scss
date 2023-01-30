@@ -92,7 +92,7 @@
 .visitor-book-subtitle {
     font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
     margin-top: 6rem;
     font-style: italic;
 }
@@ -148,3 +148,16 @@ input[type="date"] {
 .send {
     width: 10%;
 }
+
+.error {
+    width: auto;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  
+    @media screen and (min-width: 940px) {
+      width: 60%;
+      margin-left: 8em;
+    }
+  }

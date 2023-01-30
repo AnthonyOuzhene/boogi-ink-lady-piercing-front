@@ -54,8 +54,6 @@ function VisitorBook() {
                     </div>
                 </div>
 
-                <h2 className="visitor-book-subtitle">Partagez votre expérience</h2>
-
                 <VisitorBookForm />
             </div>
         )
