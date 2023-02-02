@@ -1,0 +1,19 @@
+.bad-tattoo {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 2em 0 5em 0;
+    box-shadow: 0 0 10px 0 white;
+    border-radius: 20px;
+}
+
+.error-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    font-style: italic;
+    cursor: pointer;  
+}

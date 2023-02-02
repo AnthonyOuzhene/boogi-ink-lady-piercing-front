@@ -11,6 +11,7 @@ import React, { useEffect } from "react";
 import Blog from './components/Blog/Blog';
 import BlogSingle from './components/Blog/BlogSingle';
 import Contact from './components/Contact/ContactPage';
+import Page404 from './components/Page404/Page404';
 import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
 import Login from './components/Login/Login';
@@ -19,6 +20,7 @@ import PiercingWorkSpace from './components/PiercingWorkSpace/PiercingWorkSpace'
 import SignUp from './components/Login/SignUp';
 import Shop from './components/Shop/Shop';
 import TattooWorkShop from './components/TattooWorkShop/TattooWorkShop';
+import UserAccount from './components/UserAccount/UserAccount';
 import VisitorBook from './components/VisitorBook/VisitorBook';
 
 
@@ -67,6 +69,8 @@ const App = () => {
         <Route path="/actualites" element={<Blog />} />
         <Route path="/actualites/article" element={<BlogSingle />} />
         <Route path="/la-boutique" element={<Shop />} />
+        <Route path="/profil" element={<UserAccount />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
     </div>

@@ -113,7 +113,7 @@ const Navbar = () => {
                                 )}
                                 {userIsConnected && userIsAdmin && (
                                     <li>
-                                        <a href='http://localhost:8000/admin' onClick={closeMenu}>Backoffice</a>
+                                        <a href='http://localhost:8000/admin' target="blank" onClick={closeMenu}>Backoffice</a>
                                     </li>
                                 )}
                             </ul>
