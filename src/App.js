@@ -8,17 +8,18 @@ import { setUserIsConnected, setUserIsAdmin } from './actions/actions';
 import React, { useEffect } from "react";
 
 // Import des composants
+import Blog from './components/Blog/Blog';
+import BlogSingle from './components/Blog/BlogSingle';
 import Contact from './components/Contact/ContactPage';
 import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
-import Footer from './components/Footer/Footer';
-import TattooWorkShop from './components/TattooWorkShop/TattooWorkShop';
-import PiercingWorkSpace from './components/PiercingWorkSpace/PiercingWorkSpace';
 import Login from './components/Login/Login';
+import Footer from './components/Footer/Footer';
+import PiercingWorkSpace from './components/PiercingWorkSpace/PiercingWorkSpace';
 import SignUp from './components/Login/SignUp';
+import Shop from './components/Shop/Shop';
+import TattooWorkShop from './components/TattooWorkShop/TattooWorkShop';
 import VisitorBook from './components/VisitorBook/VisitorBook';
-import Blog from './components/Blog/Blog';
-import BlogSingle from './components/Blog/BlogSingle';
 
 
 const App = () => {
@@ -30,14 +31,13 @@ const App = () => {
     //console.log(role);
     //console.log(token);
 
-  
+
     if ((token) && role === '["ROLE_ADMIN","ROLE_USER"]') {
       dispatch(setUserIsConnected(true));
       dispatch(setUserIsAdmin(true));
       //console.log('admin');
     }
-    else if ((token) && role === '["ROLE_USER"]')
-    {
+    else if ((token) && role === '["ROLE_USER"]') {
       dispatch(setUserIsConnected(true));
       dispatch(setUserIsAdmin(false));
       //console.log('user');
@@ -50,16 +50,6 @@ const App = () => {
 
     }
   }, [dispatch]);
-
-  
-
-
-
-
-
-
-
-
 
 
   return (
@@ -76,6 +66,7 @@ const App = () => {
         <Route path="/livre-d-or" element={<VisitorBook />} />
         <Route path="/actualites" element={<Blog />} />
         <Route path="/actualites/article" element={<BlogSingle />} />
+        <Route path="/la-boutique" element={<Shop />} />
       </Routes>
       <Footer />
     </div>
