@@ -1,11 +1,13 @@
 import {
     SET_USER_IS_CONNECTED,
     SET_USER_IS_ADMIN,
+    SET_USER_NAME,
 } from '../actions/actions';
 
 const initialState = {
     userIsConnected: false,
     userIsAdmin: null,
+    userName: null,
 };
 
 
@@ -20,6 +22,12 @@ const inputReducer = (state = initialState, action = {}) => {
             return {
                 ...state,
                 userIsAdmin: action.value,
+            };
+        
+        case SET_USER_NAME:
+            return {
+                ...state,
+                userName: action.value,
             };
         default:
             return state;

@@ -14,9 +14,9 @@ const Navbar = () => {
     const dispatch = useDispatch();
 
     const userIsConnected = useSelector((state) => state.userIsConnected);
-    console.log(userIsConnected);
+    //console.log(userIsConnected);
     const userIsAdmin = useSelector((state) => state.userIsAdmin);
-    console.log(userIsAdmin);
+    //console.log(userIsAdmin);
 
     // setting the state of the navbar
     const [click, setClick] = useState(false)

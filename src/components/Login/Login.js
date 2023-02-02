@@ -38,7 +38,7 @@ const Login = () => {
 
     const handleSubmitLogin = (e) => {
         e.preventDefault();
-        axios.post(url + "/login_check",
+        axios.post(url + "/login_check", //url of the api
             {
                 email: email,
                 password: password
@@ -54,8 +54,8 @@ const Login = () => {
 
                 //console.log(response);
                 notifySuccessLogin();
-                sessionStorage.setItem('token', response.data.token);
-                dispatch(setUserIsConnected(true));
+                sessionStorage.setItem('token', response.data.token); //token is a variable which holds the token 
+                dispatch(setUserIsConnected(true)); //dispatch the action to change the state of the userIsConnected variable to true
 
                 axios.get(url + '/users',
                     {
@@ -66,12 +66,16 @@ const Login = () => {
                         }
                     })
                     .then(function (response) {
+                        //console.log(response);
                         const userInfos = response.data.find(user => user.email === email);
-                        //console.log(userInfos.roles);
+                        //console.log(userInfos);
                         const roles = userInfos.roles;
                         //console.log(roles);
-                        sessionStorage.setItem('userInfos', JSON.stringify(userInfos));
+                        const userName = userInfos.name;
+
+                        //sessionStorage.setItem('userInfos', JSON.stringify(userInfos));
                         sessionStorage.setItem('roles', JSON.stringify(roles));
+                        sessionStorage.setItem('userName',JSON.stringify(userName));
 
                         window.location.href = '/';
                     })
