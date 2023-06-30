@@ -26,30 +26,32 @@ function VisitorBookForm() {
         })
     };
 
+    const [userId, setUserId] = useState('');
+    const [activityName, setActivityName] = useState('');
+    const [projectName, setProjectName] = useState('');
     const [realisationDate, setRealisationDate] = useState('');
-    const [activity, setActivity] = useState('');
-    const [title, setTitle] = useState('');
     const [message, setMessage] = useState('');
-    const [errorMessages, setErrorMessages] = useState('');
+    const [errorMessages, setErrorMessages] = useState('');    
 
     const handleSubmitComment = (e) => {
+        console.log(userId, realisationDate, activityName, projectName, message);
         setErrorMessages('');
         e.preventDefault();
 
-        if (realisationDate === '' || activity === '' || title === '' || message === '') {
+        if (realisationDate === '' || activityName === '' || projectName === '' || message === '') {
             setErrorMessages('Veuillez remplir tous les champs');
         }
-        else if (title.length < 5) { setErrorMessages('Le titre doit contenir au moins 5 caractères'); }
+        else if (projectName.length < 5) { setErrorMessages('Le titre doit contenir au moins 5 caractères'); }
         else if (message.length < 10) { setErrorMessages('Le message doit contenir au moins 10 caractères'); }
 
         else {
-
             axios.post(url, JSON.stringify(
                 {
+                    userId: userId,
                     realisationDate: realisationDate,
-                    activity: activity,
-                    title: title,
-                    message: message
+                    activityName: activityName,
+                    projectName: projectName,
+                    message: message,
                 }),
                 {
                     headers: {
@@ -96,6 +98,7 @@ function VisitorBookForm() {
                             placeholder="Votre pseudo" required
                             disabled
                             value={userName}
+                            onChange={(e) => setUserId(e.target.value)}
                         >
                         </input>
                         <br></br>
@@ -119,7 +122,7 @@ function VisitorBookForm() {
                                         id="tatouage"
                                         name="prestation"
                                         value="tatouage"
-                                        onChange={(e) => setActivity(e.target.value)}
+                                        onChange={(e) => setActivityName(e.target.value)}
                                     >
                                     </input>
                                     <br></br>
@@ -132,7 +135,7 @@ function VisitorBookForm() {
                                         id="piercing"
                                         name="prestation"
                                         value="piercing"
-                                        onChange={(e) => setActivity(e.target.value)}
+                                        onChange={(e) => setActivityName(e.target.value)}
                                     >
                                     </input>
                                     <br></br>
@@ -142,11 +145,11 @@ function VisitorBookForm() {
                             </div>
                         </fieldset>
 
-                        <label className="titre">Projet</label>
+                        <label className="project">Projet</label>
                         <input type="text"
-                            id="titre"
+                            id="project"
                             placeholder="Description de votre projet" required
-                            onChange={(e) => setTitle(e.target.value)}
+                            onChange={(e) => setProjectName(e.target.value)}
                         >
                         </input>
                         <br></br>

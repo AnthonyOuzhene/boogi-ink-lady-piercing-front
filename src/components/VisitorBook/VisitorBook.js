@@ -12,7 +12,7 @@ function VisitorBook() {
     useEffect(() => {
         axios.get('http://localhost:8000/api/comments')
             .then((response) => {
-                //console.log(response.data['hydra:member']);
+                // console.log(response.data['hydra:member']);
                 setComments(response.data['hydra:member']);
             });
     }, []);
