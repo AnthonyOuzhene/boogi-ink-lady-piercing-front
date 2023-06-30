@@ -27,7 +27,8 @@ function VisitorBookForm() {
     };
 
     const [userId, setUserId] = useState('');
-    const [activityName, setActivityName] = useState('');
+    const [activityName, setActivityName] = useState(
+        '');
     const [projectName, setProjectName] = useState('');
     const [realisationDate, setRealisationDate] = useState('');
     const [message, setMessage] = useState('');
